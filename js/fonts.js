@@ -23,8 +23,14 @@ if (sessionStorage.fontsLoaded) {
         var Lato400 = new FontFaceObserver('Lato', {
             weight: 'normal'
         });
+        var Lato500 = new FontFaceObserver('Lato', {
+            weight: '500'
+        });
         var Lato600 = new FontFaceObserver('Lato', {
             weight: '600'
+        });
+        var Lato700 = new FontFaceObserver('Lato', {
+            weight: 'bold'
         });
         var FiraSans400 = new FontFaceObserver('FiraSans', {
             weight: 'normal'
@@ -40,7 +46,9 @@ if (sessionStorage.fontsLoaded) {
             Lato300.load(),
             Lato300i.load(),
             Lato400.load(),
+            Lato500.load(),
             Lato600.load(),
+            Lato700.load(),
             FiraSans400.load(),
             FiraSans800.load(),
             FiraSans900.load()
