@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $.validator.addMethod('phoneRU',
         function(phone_number, element) {
-            return this.optional(element) || phone_number.match(/^\+7 \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/);
+            return this.optional(element) || phone_number.match(/^\+7 \d{3} \d{3}\-\d{2}\-\d{2}$/);
         },
         'Ошибка заполнения'
     );
@@ -82,8 +82,8 @@ $(document).ready(function() {
             curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
             curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
         });
-        curGallery.slick({
-            infinite: true,
+        var options = {
+            infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -99,13 +99,45 @@ $(document).ready(function() {
                     }
                 }
             ]
-        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        };
+        if (curGallery.next().hasClass('gallery-preview')) {
+            options.dots = false;
+        }
+        curGallery.slick(
+            options
+        ).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             var curSlide = curGallery.find('.slick-slide:not(.slick-cloned)').eq(nextSlide);
             var curPhotoHeight = curSlide.find('.gallery-item-photo').outerHeight();
             curGallery.find('.slick-dots').css({'top': curPhotoHeight});
             curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
             curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
+            if (curGallery.next().hasClass('gallery-preview')) {
+                curGallery.next().find('.gallery-preview-item').removeClass('active');
+                curGallery.next().find('.gallery-preview-item').eq(nextSlide).addClass('active');
+            }
+        }).on('setPosition', function(event, slick) {
+            if (curGallery.next().hasClass('gallery-preview')) {
+                var currentSlide = curGallery.slick('slickCurrentSlide');
+                curGallery.next().find('.gallery-preview-item').removeClass('active');
+                curGallery.next().find('.gallery-preview-item').eq(currentSlide).addClass('active');
+            }
         });
+
+        if (curGallery.next().hasClass('gallery-preview')) {
+            var galleryPreview = curGallery.next();
+            galleryPreview.slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                arrows: false,
+                dots: false
+            });
+            galleryPreview.find('.gallery-preview-item a').click(function(e) {
+                var curIndex = galleryPreview.find('.gallery-preview-item').index($(this).parent());
+                curGallery.slick('slickGoTo', curIndex);
+                e.preventDefault();
+            });
+        }
     });
 
     $('.header-lang-link').click(function(e) {
@@ -305,6 +337,18 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.partcipant-prefs-menu-item a', function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.partcipant-prefs-menu-item.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = $('.partcipant-prefs-menu-item').index(curLi);
+            $('.partcipant-prefs-content.active').removeClass('active');
+            $('.partcipant-prefs-content').eq(curIndex).addClass('active');
+        }
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {
@@ -314,7 +358,7 @@ function initForm(curForm) {
         }
     });
 
-    curForm.find('input.phoneRU').mask('+7 (000) 000-00-00');
+    curForm.find('input.phoneRU').mask('+7 000 000-00-00');
 
     curForm.find('.form-input textarea').each(function() {
         $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
