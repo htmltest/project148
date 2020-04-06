@@ -38,6 +38,9 @@ if (sessionStorage.fontsLoaded) {
         var FiraSans500 = new FontFaceObserver('FiraSans', {
             weight: '500'
         });
+        var FiraSans700 = new FontFaceObserver('FiraSans', {
+            weight: '700'
+        });
         var FiraSans800 = new FontFaceObserver('FiraSans', {
             weight: '800'
         });
@@ -54,6 +57,7 @@ if (sessionStorage.fontsLoaded) {
             Lato700.load(),
             FiraSans400.load(),
             FiraSans500.load(),
+            FiraSans700.load(),
             FiraSans800.load(),
             FiraSans900.load()
         ]).then(function () {
