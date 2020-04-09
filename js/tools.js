@@ -352,6 +352,28 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.window-link', function(e) {
+        windowOpen($(this).attr('href'));
+        e.preventDefault();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            windowClose();
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).hasClass('window')) {
+            windowClose();
+        }
+    });
+
+    $('body').on('click', '.window-close', function(e) {
+        windowClose();
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {
@@ -513,3 +535,54 @@ $(window).on('load resize scroll', function() {
     }
 
 });
+
+function windowOpen(linkWindow, dataWindow) {
+    if ($('.window').length > 0) {
+        windowClose();
+    }
+
+    var curPadding = $('.wrapper').width();
+    var curWidth = $(window).width();
+    if (curWidth < 480) {
+        curWidth = 480;
+    }
+    var curScroll = $(window).scrollTop();
+    $('html').addClass('window-open');
+    curPadding = $('.wrapper').width() - curPadding;
+    $('body').css({'margin-right': curPadding + 'px'});
+    $('header').css({'padding-right': curPadding + 'px'});
+
+    $('body').append('<div class="window"><div class="window-loading"></div></div>')
+
+    $('.wrapper').css({'top': -curScroll});
+    $('.wrapper').data('curScroll', curScroll);
+    $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+
+    $.ajax({
+        type: 'POST',
+        url: linkWindow,
+        processData: false,
+        contentType: false,
+        dataType: 'html',
+        data: dataWindow,
+        cache: false
+    }).done(function(html) {
+        $('.window').html('<div class="window-container">' + html + '<a href="#" class="window-close"></a></div>');
+
+        $('.window form').each(function() {
+            initForm($(this));
+        });
+    });
+}
+
+function windowClose() {
+    if ($('.window').length > 0) {
+        $('.window').remove();
+        $('html').removeClass('window-open');
+        $('body').css({'margin-right': 0});
+        $('header').css({'padding-right': 0});
+        $('.wrapper').css({'top': 0});
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
+        $(window).scrollTop($('.wrapper').data('curScroll'));
+    }
+}
