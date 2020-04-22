@@ -39,7 +39,7 @@ if (sessionStorage.fontsLoaded) {
             weight: '500'
         });
         var FiraSans700 = new FontFaceObserver('FiraSans', {
-            weight: '700'
+            weight: 'bold'
         });
         var FiraSans800 = new FontFaceObserver('FiraSans', {
             weight: '800'

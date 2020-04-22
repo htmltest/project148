@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Bee-Together</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><a href="#"></a></div>
+
+                        <div class="header-title">Аутсорсинг легкой промышленности</div>
+
+                        <div class="header-menu">
+                            <ul>
+                                <li><a href="#">Для посетителей</a></li>
+                                <li><a href="#">Для участников</a></li>
+                                <li class="active"><a href="#">Архив</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="mobile-menu-link"></a>
+
+                        <div class="header-user">
+                            <a href="#" class="header-user-link"></a>
+                        </div>
+
+                        <div class="header-lang">
+                            <a href="#" class="header-lang-link">En</a>
+                            <ul>
+                                <li class="active"><a href="#">En</a></li>
+                                <li><a href="#">Ru</a></li>
+                                <li><a href="#">Fr</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- mobile menu -->
+                <div class="mobile-menu">
+                    <div class="mobile-menu-bg"></div>
+                    <div class="mobile-menu-container">
+                        <div class="mobile-menu-header">
+                            <div class="mobile-menu-header-user">
+                                <a href="#" class="mobile-menu-header-user-link"></a>
+                            </div>
+
+                            <div class="mobile-menu-header-lang">
+                                <a href="#" class="mobile-menu-header-lang-link">En</a>
+                                <ul>
+                                    <li class="active"><a href="#">En</a></li>
+                                    <li><a href="#">Ru</a></li>
+                                    <li><a href="#">Fr</a></li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="mobile-menu-close"></a>
+                        </div>
+
+                        <div class="mobile-menu-content">
+                            <div class="mobile-menu-list">
+                                <ul>
+                                    <li class="active"><a href="#">Для посетителей</a></li>
+                                    <li><a href="#">Для участников</a></li>
+                                    <li><a href="#">Архив</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <div class="mobile-menu-contacts">
+                                <div class="mobile-menu-contacts-item">
+                                    <div class="mobile-menu-contacts-item-photo"><img src="files/mobile-menu-contacts-1.jpg" alt="" /></div>
+                                    <div class="mobile-menu-contacts-item-content">
+                                        <div class="mobile-menu-contacts-item-name">Анастасия</div>
+                                        <div class="mobile-menu-contacts-item-value"><a href="mailto:adv@profashion.ru">adv@profashion.ru</a></div>
+                                        <div class="mobile-menu-contacts-item-value"><a href="tel:+79255002881">+7 (925) 500-28-81</a></div>
+                                        <div class="mobile-menu-contacts-item-social">
+                                            <a href="#"><img src="images/mobile-menu-contacts-social-1.svg" alt="" /></a>
+                                            <a href="#"><img src="images/mobile-menu-contacts-social-2.svg" alt="" /></a>
+                                            <a href="#"><img src="images/mobile-menu-contacts-social-3.svg" alt="" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mobile-menu-contacts-item">
+                                    <div class="mobile-menu-contacts-item-photo"><img src="files/mobile-menu-contacts-2.jpg" alt="" /></div>
+                                    <div class="mobile-menu-contacts-item-content">
+                                        <div class="mobile-menu-contacts-item-name">Юлия</div>
+                                        <div class="mobile-menu-contacts-item-value"><a href="mailto:adv@profashion.ru">adv@profashion.ru</a></div>
+                                        <div class="mobile-menu-contacts-item-value"><a href="tel:+79255002881">+7 (925) 500-28-81</a></div>
+                                        <div class="mobile-menu-contacts-item-social">
+                                            <a href="#"><img src="images/mobile-menu-contacts-social-1.svg" alt="" /></a>
+                                            <a href="#"><img src="images/mobile-menu-contacts-social-2.svg" alt="" /></a>
+                                            <a href="#"><img src="images/mobile-menu-contacts-social-3.svg" alt="" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mobile-menu-social">
+                                    <a href="#"><img src="images/social-fb.svg" alt="" /></a>
+                                    <a href="#"><img src="images/social-yt.svg" alt="" /></a>
+                                    <a href="#"><img src="images/social-vk.svg" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu END -->
+
+                <!-- catalogue -->
+                <div class="catalogue">
+
+                    <!-- catalogue filter -->
+                    <div class="catalogue-filter">
+                        <div class="catalogue-filter-title">Фильтр</div>
+                        <div class="catalogue-search">
+                            <form action="#" method="post">
+                                <div class="catalogue-search-input"><input type="text" name="search" value="" placeholder="Поиск" class="required" /></div>
+                                <div class="catalogue-search-submit"><button type="submit"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M7.88187 0C9.38571 5.23976e-05 10.8583 0.419131 12.1267 1.20801C13.3951 1.99689 14.4066 3.12281 15.0423 4.45351C15.6781 5.78422 15.9118 7.26444 15.7159 8.72032C15.52 10.1762 14.9027 11.5473 13.9365 12.6725L17.7095 16.3469C17.8016 16.4368 17.8747 16.5436 17.9245 16.6611C17.9743 16.7785 18 16.9045 18 17.0316C18 17.1588 17.9743 17.2847 17.9245 17.4022C17.8747 17.5197 17.8016 17.6264 17.7095 17.7164C17.5235 17.898 17.2713 18 17.0083 18C16.878 18 16.7491 17.975 16.6287 17.9263C16.5084 17.8776 16.3991 17.8063 16.307 17.7164L12.5043 13.9744C11.1666 14.9232 9.55503 15.4331 7.90163 15.4307C5.80599 15.4307 3.79618 14.6178 2.31433 13.1709C0.832491 11.724 1.90735e-06 9.76159 1.90735e-06 7.71535C1.90735e-06 5.66911 0.832491 3.70668 2.31433 2.25977C3.79618 0.812865 5.80599 0 7.90163 0H7.88187ZM7.88187 13.5019C9.05397 13.5019 10.1997 13.1625 11.1743 12.5267C12.1489 11.8908 12.9084 10.9871 13.357 9.92975C13.8055 8.87241 13.9229 7.70893 13.6942 6.58646C13.4656 5.46398 12.9011 4.43293 12.0723 3.62367C11.2435 2.81441 10.1876 2.2633 9.03802 2.04002C7.88845 1.81675 6.69688 1.93134 5.61401 2.36931C4.53113 2.80728 3.60558 3.54895 2.9544 4.50054C2.30322 5.45212 1.95565 6.57089 1.95565 7.71535C1.95565 9.25003 2.58002 10.7219 3.6914 11.807C4.80279 12.8922 6.31014 13.5019 7.88187 13.5019Z" /></svg></button></div>
+                            </form>
+                        </div>
+
+                        <!-- catalogue filter container -->
+                        <div class="catalogue-filter-container">
+                            <form action="ajax/catalogue.html" method="post">
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header"><img src="images/catalogue-filter-1.svg" alt="" />Разделы</div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item"><label data-text="Крупносерийное производство"><input type="checkbox" name="section1" checked="checked" /><span>Крупносерийное производство</span><strong>1</strong></label></div>
+                                        <div class="catalogue-filter-item"><label data-text="Мелкосерийное производство"><input type="checkbox" name="section2" /><span>Мелкосерийное производство</span><strong>33</strong></label></div>
+                                        <div class="catalogue-filter-item"><label data-text="Салон тканей и комплектующих"><input type="checkbox" name="section3" /><span>Салон тканей и комплектующих</span><strong>41</strong></label></div>
+                                        <div class="catalogue-filter-item"><label data-text="Деловая программа"><input type="checkbox" name="section4" checked="checked" /><span>Деловая программа</span><strong>1</strong></label></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header"><img src="images/catalogue-filter-2.svg" alt="" />Страны</div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Россия"><input type="checkbox" name="country1" checked="checked" /><span><em><img src="files/flag-01.png" alt="" /></em>Россия</span><strong>1</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Турция"><input type="checkbox" name="country2" /><span><em><img src="files/flag-02.png" alt="" /></em>Турция</span><strong>33</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Англия"><input type="checkbox" name="country3" /><span><em><img src="files/flag-03.png" alt="" /></em>Англия</span><strong>41</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Франция"><input type="checkbox" name="country4" checked="checked" /><span><em><img src="files/flag-04.png" alt="" /></em>Франция</span><strong>1</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Бельгия"><input type="checkbox" name="country5" /><span><em><img src="files/flag-05.png" alt="" /></em>Бельгия</span><strong>21</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Италия"><input type="checkbox" name="country6" checked="checked" /><span><em><img src="files/flag-06.png" alt="" /></em>Италия</span><strong>2</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Турция"><input type="checkbox" name="country7" /><span><em><img src="files/flag-02.png" alt="" /></em>Турция</span><strong>33</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label data-text="Англия"><input type="checkbox" name="country8" /><span><em><img src="files/flag-03.png" alt="" /></em>Англия</span><strong>41</strong></label></div>
+                                        <div class="catalogue-filter-group-all"><a href="#"><span>Все страны</span><span>Свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header"><img src="images/catalogue-filter-3.svg" alt="" />Дата</div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item catalogue-filter-item-date"><label data-text="понедельник"><input type="checkbox" name="date1" checked="checked" /><span><em>03.04</em>понедельник</span><strong>1</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-date"><label data-text="вторник"><input type="checkbox" name="date1" checked="checked" /><span><em>04.04</em>вторник</span><strong>33</strong></label></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group">
+                                    <div class="catalogue-filter-group-header"><img src="images/catalogue-filter-4.svg" alt="" />Категория</div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item">
+                                            <div class="catalogue-filter-item-parent">
+                                                <label><input type="checkbox" name="category1" /><span></span></label>
+                                                <div class="catalogue-filter-item-parent-label">
+                                                    <div class="catalogue-filter-item-parent-label-inner" data-text="Головные уборы">
+                                                        <div class="catalogue-filter-item-parent-label-text">Головные уборы</div>
+                                                        <div class="catalogue-filter-item-sub-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <strong>1</strong>
+                                            </div>
+                                            <div class="catalogue-filter-item-sub">
+                                                <div class="catalogue-filter-item"><label data-text="Детские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category11" /><span>Детские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>41</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Женские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category12" /><span>Женские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>1</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Мужские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category13" /><span>Мужские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>21</strong></label></div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogue-filter-item open">
+                                            <div class="catalogue-filter-item-parent">
+                                                <label><input type="checkbox" name="category2" /><span></span></label>
+                                                <div class="catalogue-filter-item-parent-label">
+                                                    <div class="catalogue-filter-item-parent-label-inner" data-text="Одежда">
+                                                        <div class="catalogue-filter-item-parent-label-text">Одежда</div>
+                                                        <div class="catalogue-filter-item-sub-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <strong>33</strong>
+                                            </div>
+                                            <div class="catalogue-filter-item-sub">
+                                                <div class="catalogue-filter-item"><label data-text="Детская одежда"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category21" /><span>Детская одежда</span><div class="catalogue-filter-item-sub-status"></div></div><strong>41</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Женская одежда"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category22" /><span>Женская одежда</span><div class="catalogue-filter-item-sub-status"></div></div><strong>1</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Мужская одежда"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category23" /><span>Мужская одежда</span><div class="catalogue-filter-item-sub-status"></div></div><strong>21</strong></label></div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogue-filter-item">
+                                            <div class="catalogue-filter-item-parent">
+                                                <label><input type="checkbox" name="category3" /><span></span></label>
+                                                <div class="catalogue-filter-item-parent-label">
+                                                    <div class="catalogue-filter-item-parent-label-inner" data-text="Головные уборы головные уборы">
+                                                        <div class="catalogue-filter-item-parent-label-text">Головные уборы головные уборы</div>
+                                                        <div class="catalogue-filter-item-sub-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <strong>999</strong>
+                                            </div>
+                                            <div class="catalogue-filter-item-sub">
+                                                <div class="catalogue-filter-item"><label data-text="Детские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category31" /><span>Детские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>41</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Женские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category32" /><span>Женские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>1</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Мужские головные уборы головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="category33" /><span>Мужские головные уборы головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>21</strong></label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header"><img src="images/catalogue-filter-5.svg" alt="" />Сырье</div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item">
+                                            <div class="catalogue-filter-item-parent">
+                                                <label><input type="checkbox" name="raw1" /><span></span></label>
+                                                <div class="catalogue-filter-item-parent-label">
+                                                    <div class="catalogue-filter-item-parent-label-inner" data-text="Головные уборы">
+                                                        <div class="catalogue-filter-item-parent-label-text">Головные уборы</div>
+                                                        <div class="catalogue-filter-item-sub-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <strong>1</strong>
+                                            </div>
+                                            <div class="catalogue-filter-item-sub">
+                                                <div class="catalogue-filter-item"><label data-text="Детские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw11" /><span>Детские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>41</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Женские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw12" /><span>Женские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>1</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Мужские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw13" /><span>Мужские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>21</strong></label></div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogue-filter-item open">
+                                            <div class="catalogue-filter-item-parent">
+                                                <label><input type="checkbox" name="raw2" /><span></span></label>
+                                                <div class="catalogue-filter-item-parent-label">
+                                                    <div class="catalogue-filter-item-parent-label-inner" data-text="Одежда">
+                                                        <div class="catalogue-filter-item-parent-label-text">Одежда</div>
+                                                        <div class="catalogue-filter-item-sub-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <strong>33</strong>
+                                            </div>
+                                            <div class="catalogue-filter-item-sub">
+                                                <div class="catalogue-filter-item"><label data-text="Детская одежда"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw21" /><span>Детская одежда</span><div class="catalogue-filter-item-sub-status"></div></div><strong>41</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Женская одежда"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw22" /><span>Женская одежда</span><div class="catalogue-filter-item-sub-status"></div></div><strong>1</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Мужская одежда"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw23" /><span>Мужская одежда</span><div class="catalogue-filter-item-sub-status"></div></div><strong>21</strong></label></div>
+                                            </div>
+                                        </div>
+                                        <div class="catalogue-filter-item">
+                                            <div class="catalogue-filter-item-parent">
+                                                <label><input type="checkbox" name="raw3" /><span></span></label>
+                                                <div class="catalogue-filter-item-parent-label">
+                                                    <div class="catalogue-filter-item-parent-label-inner" data-text="Головные уборы головные уборы">
+                                                        <div class="catalogue-filter-item-parent-label-text">Головные уборы головные уборы</div>
+                                                        <div class="catalogue-filter-item-sub-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <strong>999</strong>
+                                            </div>
+                                            <div class="catalogue-filter-item-sub">
+                                                <div class="catalogue-filter-item"><label data-text="Детские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw31" /><span>Детские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>41</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Женские головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw32" /><span>Женские головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>1</strong></label></div>
+                                                <div class="catalogue-filter-item"><label data-text="Мужские головные уборы головные уборы"><div class="catalogue-filter-item-sub-inner"><input type="checkbox" name="raw33" /><span>Мужские головные уборы головные уборы</span><div class="catalogue-filter-item-sub-status"></div></div><strong>21</strong></label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <div class="catalogue-filter-btns">
+                                    <div class="catalogue-filter-submit"><button type="submit" class="btn btn-mini">Применить</button></div>
+                                    <div class="catalogue-filter-reset"><button type="reset">Сбросить</button></div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <!-- catalogue filter container END -->
+                    </div>
+                    <!-- catalogue filter END -->
+
+                    <!-- catalogue container -->
+                    <div class="catalogue-container">
+                        <div class="catalogue-container-inner">
+                            <div class="catalogue-header">
+                                <h1>Каталог участников</h1>
+                                <div class="catalogue-ctrl">
+                                    <div class="catalogue-view"><label><input type="radio" name="view" checked="checked" value="1" /><span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 1H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 7H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13H8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+                                    <div class="catalogue-view"><label><input type="radio" name="view" value="0" id="catalogue-view-rows" /><span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 7H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 1H1.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 7H1.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13H1.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+                                    <div class="catalogue-count"><strong>15</strong> компаний из <strong>46</strong></div>
+                                </div>
+                            </div>
+
+                            <div class="catalogue-recommend">
+                                <div class="catalogue-recommend-title">Рекомендуем посетить фабрики:</div>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Большевичка</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Твоё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Моё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Vstala</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Твоё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Большевичка</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Твоё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Моё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Моё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Vstala</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Твоё</a>
+                                <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Большевичка</a>
+                            </div>
+
+                            <div class="catalogue-rows-header">
+                                <div class="catalogue-rows-header-item">Компания</div>
+                                <div class="catalogue-rows-header-item">Бренды</div>
+                                <div class="catalogue-rows-header-item">Страна</div>
+                                <div class="catalogue-rows-header-item">категория</div>
+                            </div>
+
+                            <!-- catalogue list -->
+                            <div class="catalogue-list">
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Акос тэкс</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
+                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Bonadi</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />2</div>
+                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>2</strong> места на запись</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">PROfasion</div>
+                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">PROfasion</div>
+                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Акос тэкс</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />2</div>
+                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>2</strong> места на запись</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Bonadi</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />3</div>
+                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>3</strong> места на запись</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Акос тэкс</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
+                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Bonadi</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">PROfasion</div>
+                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
+                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Акос тэкс</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Bonadi</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />2</div>
+                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>2</strong> места на запись</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">PROfasion</div>
+                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">PROfasion</div>
+                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                                <div class="catalogue-item-prop">
+                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
+                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Акос тэкс</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
+                                            <div class="catalogue-item-title">Bonadi</div>
+                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-inner">
+                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
+                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
+                                            <div class="catalogue-item-props">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                            </div>
+                            <!-- catalogue list END -->
+
+                            <div class="pager">
+                                <a href="#" class="pager-prev"></a>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <span>...</span>
+                                <a href="#">12</a>
+                                <a href="#">13</a>
+                                <a href="#">14</a>
+                                <a href="#" class="pager-next"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- catalogue container END -->
+
+                </div>
+                <!-- catalogue END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+                <div class="footer-right">
+                    <div class="footer-block">
+                        <div class="footer-block-link"><a href="#">Для посетителей</a></div>
+                        <div class="footer-block-link"><a href="#">Для участников</a></div>
+                    </div>
+
+                    <div class="footer-block">
+                        <div class="footer-block-title">Архив мероприятий</div>
+                        <div class="footer-block-content">
+                            <div class="footer-archive">
+                                <div class="footer-archive-item"><a href="#">Bee-Together 8 (2019)</a></div>
+                                <div class="footer-archive-item"><a href="#">Bee-Together 7 (2018)</a></div>
+                                <div class="footer-archive-item"><a href="#">Bee-Together 6 (2017)</a></div>
+                                <div class="footer-archive-item"><a href="#">Bee-Together 5 (2016)</a></div>
+                                <div class="footer-archive-all"><a href="#">смотреть все</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-block footer-block-contacts">
+                        <div class="footer-block-title">По вопросам посещения:</div>
+                        <div class="footer-contacts">
+                            <div class="footer-contacts-item">
+                                <div class="footer-contacts-item-name">Виктория</div>
+                                <div class="footer-contacts-item-info">
+                                    <div class="footer-contacts-item-info-phone"><a href="tel:+79161341321">+7 (916) 134-13-21</a></div>
+                                    <div class="footer-contacts-item-info-email"><a href="mailto:manager@rafi.moscow">manager@rafi.moscow</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-contacts-item">
+                                <div class="footer-contacts-item-name">Маргарита</div>
+                                <div class="footer-contacts-item-info">
+                                    <div class="footer-contacts-item-info-phone"><a href="tel:+79161341321">+7 (916) 134-13-21</a></div>
+                                    <div class="footer-contacts-item-info-email"><a href="mailto:manager@rafi.moscow">manager@rafi.moscow</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-contacts-item">
+                                <div class="footer-contacts-item-name">Людмила</div>
+                                <div class="footer-contacts-item-info">
+                                    <div class="footer-contacts-item-info-phone"><a href="tel:+79161341321">+7 (916) 134-13-21</a></div>
+                                    <div class="footer-contacts-item-info-email"><a href="mailto:manager@rafi.moscow">manager@rafi.moscow</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-contacts-all"><a href="#">все контакты</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-left">
+                    <div class="footer-logo"></div>
+                    <div class="footer-title">Аутсорсинг легкой промышленности</div>
+
+                    <div class="footer-social">
+                        <a href="#"><img src="images/social-fb.svg" alt="" /></a>
+                        <a href="#"><img src="images/social-yt.svg" alt="" /></a>
+                        <a href="#"><img src="images/social-vk.svg" alt="" /></a>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="footer-copyrights">© 2016—2020</div>
+
+                        <div class="footer-links">
+                            <div class="footer-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-link"><a href="#">Правила сайта</a></div>
+                            <div class="footer-link"><a href="#">Политика конфиденциальности</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="up-link"></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/clipboard.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
