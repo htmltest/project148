@@ -178,6 +178,33 @@
     .select2-container--default .select2-selection--single {
       border-color: #b9b9b9; }
   }
+.select2-container--full::after {
+  content: attr(data-placeholder);
+  font-weight: normal;
+  position: absolute;
+  left: 20px;
+  top: 11px;
+  color: #808080;
+  padding: 0;
+  font-size: 13px;
+  line-height: 19px;
+  pointer-events: none; }
+  @media screen and (max-width:1119px) {
+    .select2-container--full::after {
+      font-size: 16px;
+      line-height: 24px;
+      top: 10px;
+      padding:0;
+      left: 20px; }
+  }
+  .select2-container.select2-container--full .select2-selection--single .select2-selection__rendered {
+    padding-top: 24px;
+    line-height: 24px; }
+  @media screen and (max-width:1119px) {
+    .select2-container.select2-container--full .select2-selection--single .select2-selection__rendered {
+      padding-top: 27px;
+      line-height: 30px; }
+  }
   .form-select select.error+.select2-container--default,
   .form-select select.error+label.error+.select2-container--default {
     margin-bottom: 22px; }
@@ -191,6 +218,7 @@
       }
   .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #000;
+    padding-top: 0;
     line-height: 58px; }
     @media screen and (max-width:1169px) {
       .select2-container--default .select2-selection--single .select2-selection__rendered {

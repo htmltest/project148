@@ -4,11 +4,13 @@
         <meta charset="utf-8" />
         <title>Bee-Together</title>
 
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/public.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+        <link rel="stylesheet" href="js/magnific-popup/magnific-popup.css" />
 
         <link rel="icon" type="image/png" href="favicon.png" />
 
@@ -50,6 +52,8 @@
                                 <li><a href="#">Fr</a></li>
                             </ul>
                         </div>
+
+                        <div class="header-visit"><a href="#" class="btn btn-mini"><img src="images/header-visit.svg" alt="" />Посетить</a></div>
                     </div>
                 </header>
 
@@ -83,6 +87,7 @@
                                     <li><a href="#">Контакты</a></li>
                                 </ul>
                             </div>
+                            <div class="mobile-menu-visit"><a href="#" class="btn btn-mini"><img src="images/mobile-menu-visit.svg" alt="" />Посетить</a></div>
                             <div class="mobile-menu-contacts">
                                 <div class="mobile-menu-contacts-item">
                                     <div class="mobile-menu-contacts-item-photo"><img src="files/mobile-menu-contacts-1.jpg" alt="" /></div>
@@ -320,6 +325,11 @@
                                 </div>
                             </div>
 
+                            <div class="catalogue-info">
+                                <div class="catalogue-info-text"><strong>Новая функция!</strong> Оставайтесь на связи с фабриками - добавляйте их в свои "Интересы"!</div>
+                                <div class="catalogue-info-btn"><a href="#">подробнее</a></div>
+                            </div>
+
                             <div class="catalogue-recommend">
                                 <div class="catalogue-recommend-title">Рекомендуем посетить фабрики:</div>
                                 <a href="windows/catalogue.html" class="catalogue-recommend-item window-link">Большевичка</a>
@@ -338,9 +348,10 @@
 
                             <div class="catalogue-rows-header">
                                 <div class="catalogue-rows-header-item">Компания</div>
-                                <div class="catalogue-rows-header-item">Бренды</div>
                                 <div class="catalogue-rows-header-item">Страна</div>
+                                <div class="catalogue-rows-header-item">Сырье</div>
                                 <div class="catalogue-rows-header-item">категория</div>
+                                <div class="catalogue-rows-header-item">&nbsp;</div>
                             </div>
 
                             <!-- catalogue list -->
@@ -350,51 +361,52 @@
                                 <div class="catalogue-item">
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Акос тэкс</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
-                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
                                             <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Bonadi</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Bonadi Очень длинное название компании для проверки</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди» Очень длинное название брендов для проверки</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-02.png" alt="" /><span class="catalogue-item-country-item-hint-title">Турция</span></span>
+                                                    <span class="catalogue-item-country-item-title">Турция</span>
+                                                </div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-01.png" alt="" /><span class="catalogue-item-country-item-hint-title">Россия</span></span>
+                                                    <span class="catalogue-item-country-item-title">Россия</span>
+                                                    <span class="catalogue-item-country-region">ВO<span class="catalogue-item-country-region-title">Владимирская область</span></span>
+                                                    <span class="catalogue-item-country-sep"></span>
+                                                    <span class="catalogue-item-country-region">РК<span class="catalogue-item-country-region-title">Республика Карелия</span></span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />2</div>
-                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>2</strong> места на запись</div>
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">женская одежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">мужская одежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-3.svg" alt="" /><span class="catalogue-item-country-item-hint-title">детская одежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-4.svg" alt="" /><span class="catalogue-item-country-item-hint-title">верхняя детская одежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-5.svg" alt="" /><span class="catalogue-item-country-item-hint-title">верхняя одежда</span></span>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">466</div>
+                                            </div>
+                                            <div class="catalogue-item-recommend catalogue-item-recommend-blue">рекомендуем</div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new catalogue-item-order-new-active"><a href="#"><img src="images/archive-card-info-btn-interest-active.svg" alt="" />Встреча добавлена</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -402,21 +414,55 @@
                                 <div class="catalogue-item">
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">PROfasion</div>
-                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="images/catalogue-item-logo.svg" alt="" /></div></div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Акос тэкс</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-01.png" alt="" /><span class="catalogue-item-country-item-hint-title">Россия</span></span>
+                                                    <span class="catalogue-item-country-item-title">Россия</span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                        <span class="catalogue-item-country-item-hint">E<span class="catalogue-item-country-item-hint-title">Что-то на E</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-6.svg" alt="" /><span class="catalogue-item-country-item-hint-title">школьная форма</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-7.svg" alt="" /><span class="catalogue-item-country-item-hint-title">джинсовая одежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-8.svg" alt="" /><span class="catalogue-item-country-item-hint-title">для беременных</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-9.svg" alt="" /><span class="catalogue-item-country-item-hint-title">головные уборы</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-10.svg" alt="" /><span class="catalogue-item-country-item-hint-title">домашняя одежда и текстиль</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-11.svg" alt="" /><span class="catalogue-item-country-item-hint-title">большие размеры</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-12.svg" alt="" /><span class="catalogue-item-country-item-hint-title">купальники</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-13.svg" alt="" /><span class="catalogue-item-country-item-hint-title">вязаный трикотаж</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-14.svg" alt="" /><span class="catalogue-item-country-item-hint-title">кроеный трикотаж</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-15.svg" alt="" /><span class="catalogue-item-country-item-hint-title">нижнее белье</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-16.svg" alt="" /><span class="catalogue-item-country-item-hint-title">термобелье</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-17.svg" alt="" /><span class="catalogue-item-country-item-hint-title">спортивная одежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-18.svg" alt="" /><span class="catalogue-item-country-item-hint-title">носочно-чулочная продукция</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-19.svg" alt="" /><span class="catalogue-item-country-item-hint-title">униформа и спецодежда</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-20.svg" alt="" /><span class="catalogue-item-country-item-hint-title">сумки и аксессуары</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-21.svg" alt="" /><span class="catalogue-item-country-item-hint-title">ткань</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">355</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new"><a href="#"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2983 5.93984L15.2901 6.25529L14.4146 1.78966L16.6644 0.951733C16.7292 0.927783 16.7883 0.892212 16.8383 0.847049C16.8883 0.801886 16.9283 0.748017 16.9558 0.688516C16.9834 0.629016 16.9981 0.565049 16.9991 0.50027C17.0001 0.43549 16.9873 0.371165 16.9616 0.310968C16.9358 0.250771 16.8975 0.19588 16.8489 0.14943C16.8002 0.102981 16.7423 0.0658811 16.6782 0.0402501C16.6141 0.0146191 16.5453 0.000958769 16.4755 4.86822e-05C16.4058 -0.000861405 16.3366 0.0109967 16.2718 0.0349461L13.6187 1.02074C13.503 1.06146 13.4064 1.13842 13.3453 1.23831C13.2843 1.33821 13.2627 1.45476 13.2844 1.56785V1.65657L12.0162 2.24312C11.9281 2.28464 11.8293 2.30248 11.7308 2.29465C11.6324 2.28681 11.5383 2.2536 11.4591 2.19876L10.1696 1.28197C9.89411 1.09001 9.55897 0.986235 9.21454 0.986235H7.77656C7.58114 0.986325 7.38954 1.03654 7.22288 1.13134C7.05622 1.22614 6.92098 1.36184 6.83206 1.52349L5.88226 1.47913C5.79025 1.47551 5.69882 1.4942 5.61695 1.53335L4.73082 1.94245L3.20264 1.58757V1.52349C3.21392 1.42349 3.19201 1.32268 3.13985 1.23457C3.08768 1.14647 3.00776 1.0753 2.9108 1.0306L0.788326 0.044804C0.664643 -0.00303884 0.526054 -0.00564871 0.400385 0.0374985C0.274715 0.0806458 0.171269 0.166356 0.110815 0.27742C0.0503614 0.388485 0.0373754 0.516681 0.0744644 0.636272C0.111553 0.755862 0.195972 0.857993 0.31077 0.922159L2.10956 1.76008L1.67446 6.22572L0.719346 5.92998C0.65071 5.90927 0.578353 5.90132 0.506408 5.90658C0.434463 5.91184 0.364338 5.93022 0.300038 5.96065C0.235737 5.99109 0.17852 6.03299 0.131653 6.08397C0.0847866 6.13495 0.0491878 6.194 0.0268897 6.25776C0.00459153 6.32152 -0.00396932 6.38873 0.00169593 6.45556C0.00736117 6.52239 0.0271416 6.58753 0.0599077 6.64726C0.0926739 6.70699 0.137784 6.76014 0.192663 6.80367C0.247542 6.84721 0.311114 6.88027 0.379751 6.90099L1.9716 7.39388C2.02795 7.40099 2.08506 7.40099 2.1414 7.39388C2.24447 7.392 2.34517 7.36479 2.43324 7.31502C2.50059 7.27423 2.55708 7.21976 2.59845 7.15572C2.63981 7.09168 2.66497 7.01974 2.67202 6.94535L2.71447 6.48696L3.39897 6.80241C3.46246 7.16824 3.66826 7.49972 3.97734 7.73398L7.039 9.77457C7.14784 9.85799 7.27349 9.92041 7.4086 9.95818C7.54372 9.99595 7.68558 10.0083 7.8259 9.99455C7.96622 9.98078 8.10218 9.94115 8.22582 9.87799C8.34945 9.81483 8.45829 9.7294 8.54596 9.6267C8.7479 9.69799 8.9637 9.72912 9.17941 9.71808C9.39511 9.70705 9.60593 9.65409 9.79822 9.56263L12.6689 8.23181C12.8421 8.15051 12.9921 8.03216 13.1065 7.88648C13.2209 7.7408 13.2964 7.57197 13.3268 7.39388C13.3321 7.34142 13.3321 7.28862 13.3268 7.23616L14.335 6.92563V6.98478C14.3484 7.05393 14.3777 7.11962 14.4207 7.17742C14.4637 7.23523 14.5195 7.28382 14.5844 7.31995C14.6719 7.37038 14.7733 7.39606 14.8762 7.39388C14.9338 7.3929 14.9909 7.3846 15.046 7.36924L16.6379 6.87634C16.7041 6.85563 16.7652 6.82301 16.8179 6.78034C16.8705 6.73767 16.9136 6.68579 16.9446 6.62767C16.9756 6.56954 16.994 6.5063 16.9988 6.44156C17.0035 6.37683 16.9945 6.31186 16.9722 6.25037C16.9499 6.18887 16.9148 6.13206 16.8688 6.08318C16.8229 6.0343 16.767 5.99429 16.7045 5.96546C16.6419 5.93662 16.5738 5.91952 16.5041 5.91512C16.4344 5.91073 16.3645 5.91913 16.2983 5.93984ZM4.62469 6.95521C4.54078 6.89031 4.48047 6.80294 4.45198 6.70503C4.42349 6.60711 4.42822 6.50342 4.46551 6.40809C4.47083 6.39098 4.48104 6.37554 4.49505 6.36339C4.50907 6.35124 4.52636 6.34284 4.5451 6.33909C4.57694 6.33909 4.61939 6.33909 4.68306 6.37852L7.8933 8.53247L7.7182 9.02537L4.62469 6.95521ZM12.1913 7.34952L9.32066 8.68034C9.19572 8.73928 9.05075 8.74991 8.91739 8.70992C8.95159 8.53483 8.93413 8.35441 8.86687 8.18779C8.79961 8.02118 8.68505 7.87458 8.53535 7.76356L5.35164 5.6096C5.20069 5.49803 5.02256 5.42261 4.8329 5.38995C4.64323 5.35729 4.44784 5.3684 4.26387 5.4223C4.01065 5.49035 3.78986 5.63635 3.63774 5.83633L2.9161 5.50116C2.88582 5.48844 2.8536 5.48013 2.82059 5.47652L3.10182 2.60293L4.69367 2.96768L4.79449 2.95782C4.87755 2.95736 4.95934 2.93879 5.03327 2.9036L5.96716 2.46492H6.31206L5.91409 3.2092C5.85116 3.3256 5.84039 3.46042 5.88413 3.58418C5.92788 3.70794 6.02259 3.81059 6.14757 3.86968L6.259 3.9239C6.60443 4.0849 7.00112 4.12368 7.37506 4.03298C7.74901 3.94229 8.07466 3.72832 8.29126 3.431H8.82188L12.2072 7.02421C12.2212 7.04991 12.2371 7.07462 12.255 7.09815C12.2732 7.11334 12.2867 7.13276 12.2942 7.15442C12.3016 7.17607 12.3028 7.19918 12.2974 7.22137C12.2998 7.24712 12.294 7.27296 12.2808 7.29572C12.2676 7.31847 12.2476 7.33717 12.2231 7.34952H12.1913ZM12.9129 6.32923L9.43209 2.63251C9.38296 2.58055 9.32261 2.53878 9.25496 2.5099C9.18731 2.48103 9.11388 2.46571 9.03943 2.46492H7.9782C7.88021 2.4652 7.78422 2.49067 7.70086 2.53852C7.61751 2.58637 7.55004 2.65473 7.50595 2.73602L7.44758 2.83952C7.39133 2.9434 7.29735 3.02545 7.18227 3.07119L7.77656 1.97203H9.21454C9.32935 1.97203 9.44106 2.00662 9.53291 2.07061L10.8488 2.98739C11.0854 3.15175 11.3666 3.2517 11.6608 3.27607C11.9551 3.30045 12.2508 3.24828 12.515 3.1254L13.5072 2.66701L14.1493 5.9497L12.9129 6.32923Z" /></svg>Новая встреча</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -424,147 +470,40 @@
                                 <div class="catalogue-item">
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">PROfasion</div>
-                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-04.png" alt="" /></div></div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Bonadi</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-02.png" alt="" /><span class="catalogue-item-country-item-hint-title">Турция</span></span>
+                                                    <span class="catalogue-item-country-item-title">Турция</span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Акос тэкс</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />2</div>
-                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>2</strong> места на запись</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Bonadi</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Турция</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />3</div>
-                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>3</strong> места на запись</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Акос тэкс</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
-                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Bonadi</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Турция</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
-                                            <div class="catalogue-item-props">
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">PROfasion</div>
-                                            <div class="catalogue-item-brands">Ricardo ricco</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
-                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new"><a href="#"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2983 5.93984L15.2901 6.25529L14.4146 1.78966L16.6644 0.951733C16.7292 0.927783 16.7883 0.892212 16.8383 0.847049C16.8883 0.801886 16.9283 0.748017 16.9558 0.688516C16.9834 0.629016 16.9981 0.565049 16.9991 0.50027C17.0001 0.43549 16.9873 0.371165 16.9616 0.310968C16.9358 0.250771 16.8975 0.19588 16.8489 0.14943C16.8002 0.102981 16.7423 0.0658811 16.6782 0.0402501C16.6141 0.0146191 16.5453 0.000958769 16.4755 4.86822e-05C16.4058 -0.000861405 16.3366 0.0109967 16.2718 0.0349461L13.6187 1.02074C13.503 1.06146 13.4064 1.13842 13.3453 1.23831C13.2843 1.33821 13.2627 1.45476 13.2844 1.56785V1.65657L12.0162 2.24312C11.9281 2.28464 11.8293 2.30248 11.7308 2.29465C11.6324 2.28681 11.5383 2.2536 11.4591 2.19876L10.1696 1.28197C9.89411 1.09001 9.55897 0.986235 9.21454 0.986235H7.77656C7.58114 0.986325 7.38954 1.03654 7.22288 1.13134C7.05622 1.22614 6.92098 1.36184 6.83206 1.52349L5.88226 1.47913C5.79025 1.47551 5.69882 1.4942 5.61695 1.53335L4.73082 1.94245L3.20264 1.58757V1.52349C3.21392 1.42349 3.19201 1.32268 3.13985 1.23457C3.08768 1.14647 3.00776 1.0753 2.9108 1.0306L0.788326 0.044804C0.664643 -0.00303884 0.526054 -0.00564871 0.400385 0.0374985C0.274715 0.0806458 0.171269 0.166356 0.110815 0.27742C0.0503614 0.388485 0.0373754 0.516681 0.0744644 0.636272C0.111553 0.755862 0.195972 0.857993 0.31077 0.922159L2.10956 1.76008L1.67446 6.22572L0.719346 5.92998C0.65071 5.90927 0.578353 5.90132 0.506408 5.90658C0.434463 5.91184 0.364338 5.93022 0.300038 5.96065C0.235737 5.99109 0.17852 6.03299 0.131653 6.08397C0.0847866 6.13495 0.0491878 6.194 0.0268897 6.25776C0.00459153 6.32152 -0.00396932 6.38873 0.00169593 6.45556C0.00736117 6.52239 0.0271416 6.58753 0.0599077 6.64726C0.0926739 6.70699 0.137784 6.76014 0.192663 6.80367C0.247542 6.84721 0.311114 6.88027 0.379751 6.90099L1.9716 7.39388C2.02795 7.40099 2.08506 7.40099 2.1414 7.39388C2.24447 7.392 2.34517 7.36479 2.43324 7.31502C2.50059 7.27423 2.55708 7.21976 2.59845 7.15572C2.63981 7.09168 2.66497 7.01974 2.67202 6.94535L2.71447 6.48696L3.39897 6.80241C3.46246 7.16824 3.66826 7.49972 3.97734 7.73398L7.039 9.77457C7.14784 9.85799 7.27349 9.92041 7.4086 9.95818C7.54372 9.99595 7.68558 10.0083 7.8259 9.99455C7.96622 9.98078 8.10218 9.94115 8.22582 9.87799C8.34945 9.81483 8.45829 9.7294 8.54596 9.6267C8.7479 9.69799 8.9637 9.72912 9.17941 9.71808C9.39511 9.70705 9.60593 9.65409 9.79822 9.56263L12.6689 8.23181C12.8421 8.15051 12.9921 8.03216 13.1065 7.88648C13.2209 7.7408 13.2964 7.57197 13.3268 7.39388C13.3321 7.34142 13.3321 7.28862 13.3268 7.23616L14.335 6.92563V6.98478C14.3484 7.05393 14.3777 7.11962 14.4207 7.17742C14.4637 7.23523 14.5195 7.28382 14.5844 7.31995C14.6719 7.37038 14.7733 7.39606 14.8762 7.39388C14.9338 7.3929 14.9909 7.3846 15.046 7.36924L16.6379 6.87634C16.7041 6.85563 16.7652 6.82301 16.8179 6.78034C16.8705 6.73767 16.9136 6.68579 16.9446 6.62767C16.9756 6.56954 16.994 6.5063 16.9988 6.44156C17.0035 6.37683 16.9945 6.31186 16.9722 6.25037C16.9499 6.18887 16.9148 6.13206 16.8688 6.08318C16.8229 6.0343 16.767 5.99429 16.7045 5.96546C16.6419 5.93662 16.5738 5.91952 16.5041 5.91512C16.4344 5.91073 16.3645 5.91913 16.2983 5.93984ZM4.62469 6.95521C4.54078 6.89031 4.48047 6.80294 4.45198 6.70503C4.42349 6.60711 4.42822 6.50342 4.46551 6.40809C4.47083 6.39098 4.48104 6.37554 4.49505 6.36339C4.50907 6.35124 4.52636 6.34284 4.5451 6.33909C4.57694 6.33909 4.61939 6.33909 4.68306 6.37852L7.8933 8.53247L7.7182 9.02537L4.62469 6.95521ZM12.1913 7.34952L9.32066 8.68034C9.19572 8.73928 9.05075 8.74991 8.91739 8.70992C8.95159 8.53483 8.93413 8.35441 8.86687 8.18779C8.79961 8.02118 8.68505 7.87458 8.53535 7.76356L5.35164 5.6096C5.20069 5.49803 5.02256 5.42261 4.8329 5.38995C4.64323 5.35729 4.44784 5.3684 4.26387 5.4223C4.01065 5.49035 3.78986 5.63635 3.63774 5.83633L2.9161 5.50116C2.88582 5.48844 2.8536 5.48013 2.82059 5.47652L3.10182 2.60293L4.69367 2.96768L4.79449 2.95782C4.87755 2.95736 4.95934 2.93879 5.03327 2.9036L5.96716 2.46492H6.31206L5.91409 3.2092C5.85116 3.3256 5.84039 3.46042 5.88413 3.58418C5.92788 3.70794 6.02259 3.81059 6.14757 3.86968L6.259 3.9239C6.60443 4.0849 7.00112 4.12368 7.37506 4.03298C7.74901 3.94229 8.07466 3.72832 8.29126 3.431H8.82188L12.2072 7.02421C12.2212 7.04991 12.2371 7.07462 12.255 7.09815C12.2732 7.11334 12.2867 7.13276 12.2942 7.15442C12.3016 7.17607 12.3028 7.19918 12.2974 7.22137C12.2998 7.24712 12.294 7.27296 12.2808 7.29572C12.2676 7.31847 12.2476 7.33717 12.2231 7.34952H12.1913ZM12.9129 6.32923L9.43209 2.63251C9.38296 2.58055 9.32261 2.53878 9.25496 2.5099C9.18731 2.48103 9.11388 2.46571 9.03943 2.46492H7.9782C7.88021 2.4652 7.78422 2.49067 7.70086 2.53852C7.61751 2.58637 7.55004 2.65473 7.50595 2.73602L7.44758 2.83952C7.39133 2.9434 7.29735 3.02545 7.18227 3.07119L7.77656 1.97203H9.21454C9.32935 1.97203 9.44106 2.00662 9.53291 2.07061L10.8488 2.98739C11.0854 3.15175 11.3666 3.2517 11.6608 3.27607C11.9551 3.30045 12.2508 3.24828 12.515 3.1254L13.5072 2.66701L14.1493 5.9497L12.9129 6.32923Z" /></svg>Новая встреча</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -573,20 +512,80 @@
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
                                             <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Акос тэкс</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Акос тэкс</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-01.png" alt="" /><span class="catalogue-item-country-item-hint-title">Россия</span></span>
+                                                    <span class="catalogue-item-country-item-title">Россия</span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Топ</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new"><a href="#"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2983 5.93984L15.2901 6.25529L14.4146 1.78966L16.6644 0.951733C16.7292 0.927783 16.7883 0.892212 16.8383 0.847049C16.8883 0.801886 16.9283 0.748017 16.9558 0.688516C16.9834 0.629016 16.9981 0.565049 16.9991 0.50027C17.0001 0.43549 16.9873 0.371165 16.9616 0.310968C16.9358 0.250771 16.8975 0.19588 16.8489 0.14943C16.8002 0.102981 16.7423 0.0658811 16.6782 0.0402501C16.6141 0.0146191 16.5453 0.000958769 16.4755 4.86822e-05C16.4058 -0.000861405 16.3366 0.0109967 16.2718 0.0349461L13.6187 1.02074C13.503 1.06146 13.4064 1.13842 13.3453 1.23831C13.2843 1.33821 13.2627 1.45476 13.2844 1.56785V1.65657L12.0162 2.24312C11.9281 2.28464 11.8293 2.30248 11.7308 2.29465C11.6324 2.28681 11.5383 2.2536 11.4591 2.19876L10.1696 1.28197C9.89411 1.09001 9.55897 0.986235 9.21454 0.986235H7.77656C7.58114 0.986325 7.38954 1.03654 7.22288 1.13134C7.05622 1.22614 6.92098 1.36184 6.83206 1.52349L5.88226 1.47913C5.79025 1.47551 5.69882 1.4942 5.61695 1.53335L4.73082 1.94245L3.20264 1.58757V1.52349C3.21392 1.42349 3.19201 1.32268 3.13985 1.23457C3.08768 1.14647 3.00776 1.0753 2.9108 1.0306L0.788326 0.044804C0.664643 -0.00303884 0.526054 -0.00564871 0.400385 0.0374985C0.274715 0.0806458 0.171269 0.166356 0.110815 0.27742C0.0503614 0.388485 0.0373754 0.516681 0.0744644 0.636272C0.111553 0.755862 0.195972 0.857993 0.31077 0.922159L2.10956 1.76008L1.67446 6.22572L0.719346 5.92998C0.65071 5.90927 0.578353 5.90132 0.506408 5.90658C0.434463 5.91184 0.364338 5.93022 0.300038 5.96065C0.235737 5.99109 0.17852 6.03299 0.131653 6.08397C0.0847866 6.13495 0.0491878 6.194 0.0268897 6.25776C0.00459153 6.32152 -0.00396932 6.38873 0.00169593 6.45556C0.00736117 6.52239 0.0271416 6.58753 0.0599077 6.64726C0.0926739 6.70699 0.137784 6.76014 0.192663 6.80367C0.247542 6.84721 0.311114 6.88027 0.379751 6.90099L1.9716 7.39388C2.02795 7.40099 2.08506 7.40099 2.1414 7.39388C2.24447 7.392 2.34517 7.36479 2.43324 7.31502C2.50059 7.27423 2.55708 7.21976 2.59845 7.15572C2.63981 7.09168 2.66497 7.01974 2.67202 6.94535L2.71447 6.48696L3.39897 6.80241C3.46246 7.16824 3.66826 7.49972 3.97734 7.73398L7.039 9.77457C7.14784 9.85799 7.27349 9.92041 7.4086 9.95818C7.54372 9.99595 7.68558 10.0083 7.8259 9.99455C7.96622 9.98078 8.10218 9.94115 8.22582 9.87799C8.34945 9.81483 8.45829 9.7294 8.54596 9.6267C8.7479 9.69799 8.9637 9.72912 9.17941 9.71808C9.39511 9.70705 9.60593 9.65409 9.79822 9.56263L12.6689 8.23181C12.8421 8.15051 12.9921 8.03216 13.1065 7.88648C13.2209 7.7408 13.2964 7.57197 13.3268 7.39388C13.3321 7.34142 13.3321 7.28862 13.3268 7.23616L14.335 6.92563V6.98478C14.3484 7.05393 14.3777 7.11962 14.4207 7.17742C14.4637 7.23523 14.5195 7.28382 14.5844 7.31995C14.6719 7.37038 14.7733 7.39606 14.8762 7.39388C14.9338 7.3929 14.9909 7.3846 15.046 7.36924L16.6379 6.87634C16.7041 6.85563 16.7652 6.82301 16.8179 6.78034C16.8705 6.73767 16.9136 6.68579 16.9446 6.62767C16.9756 6.56954 16.994 6.5063 16.9988 6.44156C17.0035 6.37683 16.9945 6.31186 16.9722 6.25037C16.9499 6.18887 16.9148 6.13206 16.8688 6.08318C16.8229 6.0343 16.767 5.99429 16.7045 5.96546C16.6419 5.93662 16.5738 5.91952 16.5041 5.91512C16.4344 5.91073 16.3645 5.91913 16.2983 5.93984ZM4.62469 6.95521C4.54078 6.89031 4.48047 6.80294 4.45198 6.70503C4.42349 6.60711 4.42822 6.50342 4.46551 6.40809C4.47083 6.39098 4.48104 6.37554 4.49505 6.36339C4.50907 6.35124 4.52636 6.34284 4.5451 6.33909C4.57694 6.33909 4.61939 6.33909 4.68306 6.37852L7.8933 8.53247L7.7182 9.02537L4.62469 6.95521ZM12.1913 7.34952L9.32066 8.68034C9.19572 8.73928 9.05075 8.74991 8.91739 8.70992C8.95159 8.53483 8.93413 8.35441 8.86687 8.18779C8.79961 8.02118 8.68505 7.87458 8.53535 7.76356L5.35164 5.6096C5.20069 5.49803 5.02256 5.42261 4.8329 5.38995C4.64323 5.35729 4.44784 5.3684 4.26387 5.4223C4.01065 5.49035 3.78986 5.63635 3.63774 5.83633L2.9161 5.50116C2.88582 5.48844 2.8536 5.48013 2.82059 5.47652L3.10182 2.60293L4.69367 2.96768L4.79449 2.95782C4.87755 2.95736 4.95934 2.93879 5.03327 2.9036L5.96716 2.46492H6.31206L5.91409 3.2092C5.85116 3.3256 5.84039 3.46042 5.88413 3.58418C5.92788 3.70794 6.02259 3.81059 6.14757 3.86968L6.259 3.9239C6.60443 4.0849 7.00112 4.12368 7.37506 4.03298C7.74901 3.94229 8.07466 3.72832 8.29126 3.431H8.82188L12.2072 7.02421C12.2212 7.04991 12.2371 7.07462 12.255 7.09815C12.2732 7.11334 12.2867 7.13276 12.2942 7.15442C12.3016 7.17607 12.3028 7.19918 12.2974 7.22137C12.2998 7.24712 12.294 7.27296 12.2808 7.29572C12.2676 7.31847 12.2476 7.33717 12.2231 7.34952H12.1913ZM12.9129 6.32923L9.43209 2.63251C9.38296 2.58055 9.32261 2.53878 9.25496 2.5099C9.18731 2.48103 9.11388 2.46571 9.03943 2.46492H7.9782C7.88021 2.4652 7.78422 2.49067 7.70086 2.53852C7.61751 2.58637 7.55004 2.65473 7.50595 2.73602L7.44758 2.83952C7.39133 2.9434 7.29735 3.02545 7.18227 3.07119L7.77656 1.97203H9.21454C9.32935 1.97203 9.44106 2.00662 9.53291 2.07061L10.8488 2.98739C11.0854 3.15175 11.3666 3.2517 11.6608 3.27607C11.9551 3.30045 12.2508 3.24828 12.515 3.1254L13.5072 2.66701L14.1493 5.9497L12.9129 6.32923Z" /></svg>Новая встреча</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
+                                        <div class="catalogue-item-wrap">
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-04.png" alt="" /></div></div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Bonadi</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            </div>
+                                            <div class="catalogue-item-country">
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-02.png" alt="" /><span class="catalogue-item-country-item-hint-title">Турция</span></span>
+                                                    <span class="catalogue-item-country-item-title">Турция</span>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new"><a href="#"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2983 5.93984L15.2901 6.25529L14.4146 1.78966L16.6644 0.951733C16.7292 0.927783 16.7883 0.892212 16.8383 0.847049C16.8883 0.801886 16.9283 0.748017 16.9558 0.688516C16.9834 0.629016 16.9981 0.565049 16.9991 0.50027C17.0001 0.43549 16.9873 0.371165 16.9616 0.310968C16.9358 0.250771 16.8975 0.19588 16.8489 0.14943C16.8002 0.102981 16.7423 0.0658811 16.6782 0.0402501C16.6141 0.0146191 16.5453 0.000958769 16.4755 4.86822e-05C16.4058 -0.000861405 16.3366 0.0109967 16.2718 0.0349461L13.6187 1.02074C13.503 1.06146 13.4064 1.13842 13.3453 1.23831C13.2843 1.33821 13.2627 1.45476 13.2844 1.56785V1.65657L12.0162 2.24312C11.9281 2.28464 11.8293 2.30248 11.7308 2.29465C11.6324 2.28681 11.5383 2.2536 11.4591 2.19876L10.1696 1.28197C9.89411 1.09001 9.55897 0.986235 9.21454 0.986235H7.77656C7.58114 0.986325 7.38954 1.03654 7.22288 1.13134C7.05622 1.22614 6.92098 1.36184 6.83206 1.52349L5.88226 1.47913C5.79025 1.47551 5.69882 1.4942 5.61695 1.53335L4.73082 1.94245L3.20264 1.58757V1.52349C3.21392 1.42349 3.19201 1.32268 3.13985 1.23457C3.08768 1.14647 3.00776 1.0753 2.9108 1.0306L0.788326 0.044804C0.664643 -0.00303884 0.526054 -0.00564871 0.400385 0.0374985C0.274715 0.0806458 0.171269 0.166356 0.110815 0.27742C0.0503614 0.388485 0.0373754 0.516681 0.0744644 0.636272C0.111553 0.755862 0.195972 0.857993 0.31077 0.922159L2.10956 1.76008L1.67446 6.22572L0.719346 5.92998C0.65071 5.90927 0.578353 5.90132 0.506408 5.90658C0.434463 5.91184 0.364338 5.93022 0.300038 5.96065C0.235737 5.99109 0.17852 6.03299 0.131653 6.08397C0.0847866 6.13495 0.0491878 6.194 0.0268897 6.25776C0.00459153 6.32152 -0.00396932 6.38873 0.00169593 6.45556C0.00736117 6.52239 0.0271416 6.58753 0.0599077 6.64726C0.0926739 6.70699 0.137784 6.76014 0.192663 6.80367C0.247542 6.84721 0.311114 6.88027 0.379751 6.90099L1.9716 7.39388C2.02795 7.40099 2.08506 7.40099 2.1414 7.39388C2.24447 7.392 2.34517 7.36479 2.43324 7.31502C2.50059 7.27423 2.55708 7.21976 2.59845 7.15572C2.63981 7.09168 2.66497 7.01974 2.67202 6.94535L2.71447 6.48696L3.39897 6.80241C3.46246 7.16824 3.66826 7.49972 3.97734 7.73398L7.039 9.77457C7.14784 9.85799 7.27349 9.92041 7.4086 9.95818C7.54372 9.99595 7.68558 10.0083 7.8259 9.99455C7.96622 9.98078 8.10218 9.94115 8.22582 9.87799C8.34945 9.81483 8.45829 9.7294 8.54596 9.6267C8.7479 9.69799 8.9637 9.72912 9.17941 9.71808C9.39511 9.70705 9.60593 9.65409 9.79822 9.56263L12.6689 8.23181C12.8421 8.15051 12.9921 8.03216 13.1065 7.88648C13.2209 7.7408 13.2964 7.57197 13.3268 7.39388C13.3321 7.34142 13.3321 7.28862 13.3268 7.23616L14.335 6.92563V6.98478C14.3484 7.05393 14.3777 7.11962 14.4207 7.17742C14.4637 7.23523 14.5195 7.28382 14.5844 7.31995C14.6719 7.37038 14.7733 7.39606 14.8762 7.39388C14.9338 7.3929 14.9909 7.3846 15.046 7.36924L16.6379 6.87634C16.7041 6.85563 16.7652 6.82301 16.8179 6.78034C16.8705 6.73767 16.9136 6.68579 16.9446 6.62767C16.9756 6.56954 16.994 6.5063 16.9988 6.44156C17.0035 6.37683 16.9945 6.31186 16.9722 6.25037C16.9499 6.18887 16.9148 6.13206 16.8688 6.08318C16.8229 6.0343 16.767 5.99429 16.7045 5.96546C16.6419 5.93662 16.5738 5.91952 16.5041 5.91512C16.4344 5.91073 16.3645 5.91913 16.2983 5.93984ZM4.62469 6.95521C4.54078 6.89031 4.48047 6.80294 4.45198 6.70503C4.42349 6.60711 4.42822 6.50342 4.46551 6.40809C4.47083 6.39098 4.48104 6.37554 4.49505 6.36339C4.50907 6.35124 4.52636 6.34284 4.5451 6.33909C4.57694 6.33909 4.61939 6.33909 4.68306 6.37852L7.8933 8.53247L7.7182 9.02537L4.62469 6.95521ZM12.1913 7.34952L9.32066 8.68034C9.19572 8.73928 9.05075 8.74991 8.91739 8.70992C8.95159 8.53483 8.93413 8.35441 8.86687 8.18779C8.79961 8.02118 8.68505 7.87458 8.53535 7.76356L5.35164 5.6096C5.20069 5.49803 5.02256 5.42261 4.8329 5.38995C4.64323 5.35729 4.44784 5.3684 4.26387 5.4223C4.01065 5.49035 3.78986 5.63635 3.63774 5.83633L2.9161 5.50116C2.88582 5.48844 2.8536 5.48013 2.82059 5.47652L3.10182 2.60293L4.69367 2.96768L4.79449 2.95782C4.87755 2.95736 4.95934 2.93879 5.03327 2.9036L5.96716 2.46492H6.31206L5.91409 3.2092C5.85116 3.3256 5.84039 3.46042 5.88413 3.58418C5.92788 3.70794 6.02259 3.81059 6.14757 3.86968L6.259 3.9239C6.60443 4.0849 7.00112 4.12368 7.37506 4.03298C7.74901 3.94229 8.07466 3.72832 8.29126 3.431H8.82188L12.2072 7.02421C12.2212 7.04991 12.2371 7.07462 12.255 7.09815C12.2732 7.11334 12.2867 7.13276 12.2942 7.15442C12.3016 7.17607 12.3028 7.19918 12.2974 7.22137C12.2998 7.24712 12.294 7.27296 12.2808 7.29572C12.2676 7.31847 12.2476 7.33717 12.2231 7.34952H12.1913ZM12.9129 6.32923L9.43209 2.63251C9.38296 2.58055 9.32261 2.53878 9.25496 2.5099C9.18731 2.48103 9.11388 2.46571 9.03943 2.46492H7.9782C7.88021 2.4652 7.78422 2.49067 7.70086 2.53852C7.61751 2.58637 7.55004 2.65473 7.50595 2.73602L7.44758 2.83952C7.39133 2.9434 7.29735 3.02545 7.18227 3.07119L7.77656 1.97203H9.21454C9.32935 1.97203 9.44106 2.00662 9.53291 2.07061L10.8488 2.98739C11.0854 3.15175 11.3666 3.2517 11.6608 3.27607C11.9551 3.30045 12.2508 3.24828 12.515 3.1254L13.5072 2.66701L14.1493 5.9497L12.9129 6.32923Z" /></svg>Новая встреча</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -595,24 +594,50 @@
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
                                             <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Bonadi</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Bonadi</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-02.png" alt="" /><span class="catalogue-item-country-item-hint-title">Турция</span></span>
+                                                    <span class="catalogue-item-country-item-title">Турция</span>
+                                                </div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-01.png" alt="" /><span class="catalogue-item-country-item-hint-title">Россия</span></span>
+                                                    <span class="catalogue-item-country-item-title">Россия</span>
+                                                    <span class="catalogue-item-country-region">ВO<span class="catalogue-item-country-region-title">Владимирская область</span></span>
+                                                    <span class="catalogue-item-country-sep"></span>
+                                                    <span class="catalogue-item-country-region">РК<span class="catalogue-item-country-region-title">Республика Карелия</span></span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-places.svg" alt="" />2</div>
-                                                    <div class="catalogue-item-prop-text">Осталось всего <strong>2</strong> места на запись</div>
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
                                                 </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Топ</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Топ</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new catalogue-item-order-new-active"><a href="#"><img src="images/archive-card-info-btn-interest-active.svg" alt="" />Встреча добавлена</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -620,47 +645,51 @@
                                 <div class="catalogue-item">
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">PROfasion</div>
-                                            <div class="catalogue-item-brands">Ricardo ricco</div>
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Bonadi</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-02.png" alt="" /><span class="catalogue-item-country-item-hint-title">Турция</span></span>
+                                                    <span class="catalogue-item-country-item-title">Турция</span>
+                                                </div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-01.png" alt="" /><span class="catalogue-item-country-item-hint-title">Россия</span></span>
+                                                    <span class="catalogue-item-country-item-title">Россия</span>
+                                                    <span class="catalogue-item-country-region">ВO<span class="catalogue-item-country-region-title">Владимирская область</span></span>
+                                                    <span class="catalogue-item-country-sep"></span>
+                                                    <span class="catalogue-item-country-region">РК<span class="catalogue-item-country-region-title">Республика Карелия</span></span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Топ</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Топ</span></span>
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
-                                </div>
-                                <!-- catalogue item END -->
-
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
-                                        <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-03.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">PROfasion</div>
-                                            <div class="catalogue-item-brands">Ricardo ricco</div>
-                                            <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
-                                                </div>
-                                            </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
-                                                <div class="catalogue-item-prop">
-                                                    <div class="catalogue-item-prop-icon"><img src="images/catalogue-item-recommend.svg" alt="" /></div>
-                                                    <div class="catalogue-item-prop-text">Рекомендуем встретиться</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new"><a href="#"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2983 5.93984L15.2901 6.25529L14.4146 1.78966L16.6644 0.951733C16.7292 0.927783 16.7883 0.892212 16.8383 0.847049C16.8883 0.801886 16.9283 0.748017 16.9558 0.688516C16.9834 0.629016 16.9981 0.565049 16.9991 0.50027C17.0001 0.43549 16.9873 0.371165 16.9616 0.310968C16.9358 0.250771 16.8975 0.19588 16.8489 0.14943C16.8002 0.102981 16.7423 0.0658811 16.6782 0.0402501C16.6141 0.0146191 16.5453 0.000958769 16.4755 4.86822e-05C16.4058 -0.000861405 16.3366 0.0109967 16.2718 0.0349461L13.6187 1.02074C13.503 1.06146 13.4064 1.13842 13.3453 1.23831C13.2843 1.33821 13.2627 1.45476 13.2844 1.56785V1.65657L12.0162 2.24312C11.9281 2.28464 11.8293 2.30248 11.7308 2.29465C11.6324 2.28681 11.5383 2.2536 11.4591 2.19876L10.1696 1.28197C9.89411 1.09001 9.55897 0.986235 9.21454 0.986235H7.77656C7.58114 0.986325 7.38954 1.03654 7.22288 1.13134C7.05622 1.22614 6.92098 1.36184 6.83206 1.52349L5.88226 1.47913C5.79025 1.47551 5.69882 1.4942 5.61695 1.53335L4.73082 1.94245L3.20264 1.58757V1.52349C3.21392 1.42349 3.19201 1.32268 3.13985 1.23457C3.08768 1.14647 3.00776 1.0753 2.9108 1.0306L0.788326 0.044804C0.664643 -0.00303884 0.526054 -0.00564871 0.400385 0.0374985C0.274715 0.0806458 0.171269 0.166356 0.110815 0.27742C0.0503614 0.388485 0.0373754 0.516681 0.0744644 0.636272C0.111553 0.755862 0.195972 0.857993 0.31077 0.922159L2.10956 1.76008L1.67446 6.22572L0.719346 5.92998C0.65071 5.90927 0.578353 5.90132 0.506408 5.90658C0.434463 5.91184 0.364338 5.93022 0.300038 5.96065C0.235737 5.99109 0.17852 6.03299 0.131653 6.08397C0.0847866 6.13495 0.0491878 6.194 0.0268897 6.25776C0.00459153 6.32152 -0.00396932 6.38873 0.00169593 6.45556C0.00736117 6.52239 0.0271416 6.58753 0.0599077 6.64726C0.0926739 6.70699 0.137784 6.76014 0.192663 6.80367C0.247542 6.84721 0.311114 6.88027 0.379751 6.90099L1.9716 7.39388C2.02795 7.40099 2.08506 7.40099 2.1414 7.39388C2.24447 7.392 2.34517 7.36479 2.43324 7.31502C2.50059 7.27423 2.55708 7.21976 2.59845 7.15572C2.63981 7.09168 2.66497 7.01974 2.67202 6.94535L2.71447 6.48696L3.39897 6.80241C3.46246 7.16824 3.66826 7.49972 3.97734 7.73398L7.039 9.77457C7.14784 9.85799 7.27349 9.92041 7.4086 9.95818C7.54372 9.99595 7.68558 10.0083 7.8259 9.99455C7.96622 9.98078 8.10218 9.94115 8.22582 9.87799C8.34945 9.81483 8.45829 9.7294 8.54596 9.6267C8.7479 9.69799 8.9637 9.72912 9.17941 9.71808C9.39511 9.70705 9.60593 9.65409 9.79822 9.56263L12.6689 8.23181C12.8421 8.15051 12.9921 8.03216 13.1065 7.88648C13.2209 7.7408 13.2964 7.57197 13.3268 7.39388C13.3321 7.34142 13.3321 7.28862 13.3268 7.23616L14.335 6.92563V6.98478C14.3484 7.05393 14.3777 7.11962 14.4207 7.17742C14.4637 7.23523 14.5195 7.28382 14.5844 7.31995C14.6719 7.37038 14.7733 7.39606 14.8762 7.39388C14.9338 7.3929 14.9909 7.3846 15.046 7.36924L16.6379 6.87634C16.7041 6.85563 16.7652 6.82301 16.8179 6.78034C16.8705 6.73767 16.9136 6.68579 16.9446 6.62767C16.9756 6.56954 16.994 6.5063 16.9988 6.44156C17.0035 6.37683 16.9945 6.31186 16.9722 6.25037C16.9499 6.18887 16.9148 6.13206 16.8688 6.08318C16.8229 6.0343 16.767 5.99429 16.7045 5.96546C16.6419 5.93662 16.5738 5.91952 16.5041 5.91512C16.4344 5.91073 16.3645 5.91913 16.2983 5.93984ZM4.62469 6.95521C4.54078 6.89031 4.48047 6.80294 4.45198 6.70503C4.42349 6.60711 4.42822 6.50342 4.46551 6.40809C4.47083 6.39098 4.48104 6.37554 4.49505 6.36339C4.50907 6.35124 4.52636 6.34284 4.5451 6.33909C4.57694 6.33909 4.61939 6.33909 4.68306 6.37852L7.8933 8.53247L7.7182 9.02537L4.62469 6.95521ZM12.1913 7.34952L9.32066 8.68034C9.19572 8.73928 9.05075 8.74991 8.91739 8.70992C8.95159 8.53483 8.93413 8.35441 8.86687 8.18779C8.79961 8.02118 8.68505 7.87458 8.53535 7.76356L5.35164 5.6096C5.20069 5.49803 5.02256 5.42261 4.8329 5.38995C4.64323 5.35729 4.44784 5.3684 4.26387 5.4223C4.01065 5.49035 3.78986 5.63635 3.63774 5.83633L2.9161 5.50116C2.88582 5.48844 2.8536 5.48013 2.82059 5.47652L3.10182 2.60293L4.69367 2.96768L4.79449 2.95782C4.87755 2.95736 4.95934 2.93879 5.03327 2.9036L5.96716 2.46492H6.31206L5.91409 3.2092C5.85116 3.3256 5.84039 3.46042 5.88413 3.58418C5.92788 3.70794 6.02259 3.81059 6.14757 3.86968L6.259 3.9239C6.60443 4.0849 7.00112 4.12368 7.37506 4.03298C7.74901 3.94229 8.07466 3.72832 8.29126 3.431H8.82188L12.2072 7.02421C12.2212 7.04991 12.2371 7.07462 12.255 7.09815C12.2732 7.11334 12.2867 7.13276 12.2942 7.15442C12.3016 7.17607 12.3028 7.19918 12.2974 7.22137C12.2998 7.24712 12.294 7.27296 12.2808 7.29572C12.2676 7.31847 12.2476 7.33717 12.2231 7.34952H12.1913ZM12.9129 6.32923L9.43209 2.63251C9.38296 2.58055 9.32261 2.53878 9.25496 2.5099C9.18731 2.48103 9.11388 2.46571 9.03943 2.46492H7.9782C7.88021 2.4652 7.78422 2.49067 7.70086 2.53852C7.61751 2.58637 7.55004 2.65473 7.50595 2.73602L7.44758 2.83952C7.39133 2.9434 7.29735 3.02545 7.18227 3.07119L7.77656 1.97203H9.21454C9.32935 1.97203 9.44106 2.00662 9.53291 2.07061L10.8488 2.98739C11.0854 3.15175 11.3666 3.2517 11.6608 3.27607C11.9551 3.30045 12.2508 3.24828 12.515 3.1254L13.5072 2.66701L14.1493 5.9497L12.9129 6.32923Z" /></svg>Новая встреча</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -669,20 +698,39 @@
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
                                             <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-01.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Акос тэкс</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Акос тэкс</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди», Ricardo ricco</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-01.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Россия</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-01.png" alt="" /><span class="catalogue-item-country-item-hint-title">Россия</span></span>
+                                                    <span class="catalogue-item-country-item-title">Россия</span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда, Женская одежда, Мужская одежда, Трикотаж вязаный</div>
-                                            <div class="catalogue-item-props">
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Топ</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new catalogue-item-order-new-active"><a href="#"><img src="images/archive-card-info-btn-interest-active.svg" alt="" />Встреча добавлена</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -690,21 +738,40 @@
                                 <div class="catalogue-item">
                                     <a href="windows/catalogue.html" class="catalogue-item-inner window-link">
                                         <div class="catalogue-item-wrap">
-                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-02.png" alt="" /></div></div>
-                                            <div class="catalogue-item-title">Bonadi</div>
-                                            <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            <div class="catalogue-item-logo"><div class="catalogue-item-logo-inner"><img src="files/catalogue-logo-04.png" alt="" /></div></div>
+                                            <div class="catalogue-item-info">
+                                                <div class="catalogue-item-title">Bonadi</div>
+                                                <div class="catalogue-item-brands">«Вежливые люди»</div>
+                                            </div>
                                             <div class="catalogue-item-country">
-                                                <div class="catalogue-item-country-inner">
-                                                    <div class="catalogue-item-country-flag"><img src="files/catalogue-flag-02.png" alt="" /></div>
-                                                    <div class="catalogue-item-country-title">Турция</div>
+                                                <div class="catalogue-item-country-item">
+                                                    <span class="catalogue-item-country-item-hint"><img src="files/catalogue-flag-02.png" alt="" /><span class="catalogue-item-country-item-hint-title">Турция</span></span>
+                                                    <span class="catalogue-item-country-item-title">Турция</span>
                                                 </div>
                                             </div>
-                                            <div class="catalogue-item-category">Головные уборы, Детская одежда,</div>
-                                            <div class="catalogue-item-props">
+                                            <div class="catalogue-item-source">
+                                                <div class="catalogue-item-source-inner">
+                                                    <div class="catalogue-item-source-title">сырье</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Что-то на Д</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-source-category">
+                                                    <div class="catalogue-item-source-title">категория</div>
+                                                    <div class="catalogue-item-source-value">
+                                                        <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">Футболка</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalogue-item-props catalogue-item-props-1">
+                                                <div class="catalogue-item-view">1 466</div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="catalogue-item-order"><a href="#">Записаться на встречу</a></div>
+                                    <div class="catalogue-item-links">
+                                        <div class="catalogue-item-order catalogue-item-order-new"><a href="#"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2983 5.93984L15.2901 6.25529L14.4146 1.78966L16.6644 0.951733C16.7292 0.927783 16.7883 0.892212 16.8383 0.847049C16.8883 0.801886 16.9283 0.748017 16.9558 0.688516C16.9834 0.629016 16.9981 0.565049 16.9991 0.50027C17.0001 0.43549 16.9873 0.371165 16.9616 0.310968C16.9358 0.250771 16.8975 0.19588 16.8489 0.14943C16.8002 0.102981 16.7423 0.0658811 16.6782 0.0402501C16.6141 0.0146191 16.5453 0.000958769 16.4755 4.86822e-05C16.4058 -0.000861405 16.3366 0.0109967 16.2718 0.0349461L13.6187 1.02074C13.503 1.06146 13.4064 1.13842 13.3453 1.23831C13.2843 1.33821 13.2627 1.45476 13.2844 1.56785V1.65657L12.0162 2.24312C11.9281 2.28464 11.8293 2.30248 11.7308 2.29465C11.6324 2.28681 11.5383 2.2536 11.4591 2.19876L10.1696 1.28197C9.89411 1.09001 9.55897 0.986235 9.21454 0.986235H7.77656C7.58114 0.986325 7.38954 1.03654 7.22288 1.13134C7.05622 1.22614 6.92098 1.36184 6.83206 1.52349L5.88226 1.47913C5.79025 1.47551 5.69882 1.4942 5.61695 1.53335L4.73082 1.94245L3.20264 1.58757V1.52349C3.21392 1.42349 3.19201 1.32268 3.13985 1.23457C3.08768 1.14647 3.00776 1.0753 2.9108 1.0306L0.788326 0.044804C0.664643 -0.00303884 0.526054 -0.00564871 0.400385 0.0374985C0.274715 0.0806458 0.171269 0.166356 0.110815 0.27742C0.0503614 0.388485 0.0373754 0.516681 0.0744644 0.636272C0.111553 0.755862 0.195972 0.857993 0.31077 0.922159L2.10956 1.76008L1.67446 6.22572L0.719346 5.92998C0.65071 5.90927 0.578353 5.90132 0.506408 5.90658C0.434463 5.91184 0.364338 5.93022 0.300038 5.96065C0.235737 5.99109 0.17852 6.03299 0.131653 6.08397C0.0847866 6.13495 0.0491878 6.194 0.0268897 6.25776C0.00459153 6.32152 -0.00396932 6.38873 0.00169593 6.45556C0.00736117 6.52239 0.0271416 6.58753 0.0599077 6.64726C0.0926739 6.70699 0.137784 6.76014 0.192663 6.80367C0.247542 6.84721 0.311114 6.88027 0.379751 6.90099L1.9716 7.39388C2.02795 7.40099 2.08506 7.40099 2.1414 7.39388C2.24447 7.392 2.34517 7.36479 2.43324 7.31502C2.50059 7.27423 2.55708 7.21976 2.59845 7.15572C2.63981 7.09168 2.66497 7.01974 2.67202 6.94535L2.71447 6.48696L3.39897 6.80241C3.46246 7.16824 3.66826 7.49972 3.97734 7.73398L7.039 9.77457C7.14784 9.85799 7.27349 9.92041 7.4086 9.95818C7.54372 9.99595 7.68558 10.0083 7.8259 9.99455C7.96622 9.98078 8.10218 9.94115 8.22582 9.87799C8.34945 9.81483 8.45829 9.7294 8.54596 9.6267C8.7479 9.69799 8.9637 9.72912 9.17941 9.71808C9.39511 9.70705 9.60593 9.65409 9.79822 9.56263L12.6689 8.23181C12.8421 8.15051 12.9921 8.03216 13.1065 7.88648C13.2209 7.7408 13.2964 7.57197 13.3268 7.39388C13.3321 7.34142 13.3321 7.28862 13.3268 7.23616L14.335 6.92563V6.98478C14.3484 7.05393 14.3777 7.11962 14.4207 7.17742C14.4637 7.23523 14.5195 7.28382 14.5844 7.31995C14.6719 7.37038 14.7733 7.39606 14.8762 7.39388C14.9338 7.3929 14.9909 7.3846 15.046 7.36924L16.6379 6.87634C16.7041 6.85563 16.7652 6.82301 16.8179 6.78034C16.8705 6.73767 16.9136 6.68579 16.9446 6.62767C16.9756 6.56954 16.994 6.5063 16.9988 6.44156C17.0035 6.37683 16.9945 6.31186 16.9722 6.25037C16.9499 6.18887 16.9148 6.13206 16.8688 6.08318C16.8229 6.0343 16.767 5.99429 16.7045 5.96546C16.6419 5.93662 16.5738 5.91952 16.5041 5.91512C16.4344 5.91073 16.3645 5.91913 16.2983 5.93984ZM4.62469 6.95521C4.54078 6.89031 4.48047 6.80294 4.45198 6.70503C4.42349 6.60711 4.42822 6.50342 4.46551 6.40809C4.47083 6.39098 4.48104 6.37554 4.49505 6.36339C4.50907 6.35124 4.52636 6.34284 4.5451 6.33909C4.57694 6.33909 4.61939 6.33909 4.68306 6.37852L7.8933 8.53247L7.7182 9.02537L4.62469 6.95521ZM12.1913 7.34952L9.32066 8.68034C9.19572 8.73928 9.05075 8.74991 8.91739 8.70992C8.95159 8.53483 8.93413 8.35441 8.86687 8.18779C8.79961 8.02118 8.68505 7.87458 8.53535 7.76356L5.35164 5.6096C5.20069 5.49803 5.02256 5.42261 4.8329 5.38995C4.64323 5.35729 4.44784 5.3684 4.26387 5.4223C4.01065 5.49035 3.78986 5.63635 3.63774 5.83633L2.9161 5.50116C2.88582 5.48844 2.8536 5.48013 2.82059 5.47652L3.10182 2.60293L4.69367 2.96768L4.79449 2.95782C4.87755 2.95736 4.95934 2.93879 5.03327 2.9036L5.96716 2.46492H6.31206L5.91409 3.2092C5.85116 3.3256 5.84039 3.46042 5.88413 3.58418C5.92788 3.70794 6.02259 3.81059 6.14757 3.86968L6.259 3.9239C6.60443 4.0849 7.00112 4.12368 7.37506 4.03298C7.74901 3.94229 8.07466 3.72832 8.29126 3.431H8.82188L12.2072 7.02421C12.2212 7.04991 12.2371 7.07462 12.255 7.09815C12.2732 7.11334 12.2867 7.13276 12.2942 7.15442C12.3016 7.17607 12.3028 7.19918 12.2974 7.22137C12.2998 7.24712 12.294 7.27296 12.2808 7.29572C12.2676 7.31847 12.2476 7.33717 12.2231 7.34952H12.1913ZM12.9129 6.32923L9.43209 2.63251C9.38296 2.58055 9.32261 2.53878 9.25496 2.5099C9.18731 2.48103 9.11388 2.46571 9.03943 2.46492H7.9782C7.88021 2.4652 7.78422 2.49067 7.70086 2.53852C7.61751 2.58637 7.55004 2.65473 7.50595 2.73602L7.44758 2.83952C7.39133 2.9434 7.29735 3.02545 7.18227 3.07119L7.77656 1.97203H9.21454C9.32935 1.97203 9.44106 2.00662 9.53291 2.07061L10.8488 2.98739C11.0854 3.15175 11.3666 3.2517 11.6608 3.27607C11.9551 3.30045 12.2508 3.24828 12.515 3.1254L13.5072 2.66701L14.1493 5.9497L12.9129 6.32923Z" /></svg>Новая встреча</a></div>
+                                        <div class="catalogue-item-faq catalogue-item-faq-1"><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.25C9.53757 12.25 12 9.78757 12 6.75C12 3.71243 9.53757 1.25 6.5 1.25C3.46243 1.25 1 3.71243 1 6.75C1 9.78757 3.46243 12.25 6.5 12.25Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.89941 5.09856C5.02872 4.73097 5.28395 4.42101 5.61989 4.22358C5.95583 4.02614 6.35081 3.95397 6.73486 4.01985C7.11892 4.08572 7.46726 4.28539 7.71821 4.5835C7.96915 4.8816 8.10649 5.25889 8.10591 5.64856C8.10591 6.74856 6.45591 7.29856 6.45591 7.29856" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 9.5H6.50705" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Вопрос</a></div>
+                                    </div>
                                 </div>
                                 <!-- catalogue item END -->
 
@@ -806,7 +873,24 @@
             </div>
         </footer>
 
-        <a href="#" class="up-link"></a>
+        <a href="#" class="up-link"><svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M58.8288 70.0587L28.1478 70.0587L12.8074 43.4882L28.1478 16.9177L58.8288 16.9177L74.1693 43.4882L58.8288 70.0587Z" class="up-link-bg" stroke="white" stroke-width="2"/><path d="M53.0001 48.001L43.0001 38.001L33.0001 48.001" stroke="black" stroke-width="3"/></svg></a>
+
+        <div class="omni">
+            <a href="#" class="omni-link"><svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M58.8288 70.0587L28.1478 70.0587L12.8074 43.4882L28.1478 16.9177L58.8288 16.9177L74.1693 43.4882L58.8288 70.0587Z" class="omni-link-bg" stroke="white" stroke-width="2"/><path d="M51.6666 34.8926H34.3333C33.4714 34.8926 32.6447 35.235 32.0352 35.8445C31.4257 36.454 31.0833 37.2806 31.0833 38.1426V47.8926C31.0833 48.3194 31.1674 48.742 31.3307 49.1363C31.494 49.5306 31.7334 49.8889 32.0352 50.1907C32.337 50.4925 32.6953 50.7319 33.0896 50.8952C33.4839 51.0585 33.9065 51.1426 34.3333 51.1426H35.9583L38.45 54.4576C38.6013 54.6594 38.7976 54.8232 39.0233 54.936C39.2489 55.0488 39.4977 55.1076 39.75 55.1076C40.0023 55.1076 40.2511 55.0488 40.4767 54.936C40.7023 54.8232 40.8986 54.6594 41.05 54.4576L43.5416 51.1426H51.6666C52.5286 51.1426 53.3552 50.8002 53.9647 50.1907C54.5742 49.5812 54.9166 48.7545 54.9166 47.8926V38.1426C54.9166 37.7158 54.8326 37.2932 54.6693 36.8989C54.5059 36.5045 54.2665 36.1463 53.9647 35.8445C53.663 35.5427 53.3047 35.3033 52.9104 35.14C52.5161 34.9766 52.0934 34.8926 51.6666 34.8926ZM52.75 47.8926C52.75 48.1799 52.6358 48.4554 52.4327 48.6586C52.2295 48.8618 51.954 48.9759 51.6666 48.9759H42.4583L39.75 52.5834L37.0416 48.9759H34.3333C34.046 48.9759 33.7704 48.8618 33.5673 48.6586C33.3641 48.4554 33.25 48.1799 33.25 47.8926V38.1426C33.25 37.8553 33.3641 37.5797 33.5673 37.3765C33.7704 37.1734 34.046 37.0592 34.3333 37.0592H51.6666C51.954 37.0592 52.2295 37.1734 52.4327 37.3765C52.6358 37.5797 52.75 37.8553 52.75 38.1426V47.8926Z" fill="#0e1317"/><path d="M36.5 41.3927H41.9166C42.2039 41.3927 42.4795 41.2786 42.6827 41.0754C42.8858 40.8723 43 40.5967 43 40.3094C43 40.0221 42.8858 39.7465 42.6827 39.5434C42.4795 39.3402 42.2039 39.2261 41.9166 39.2261H36.5C36.2126 39.2261 35.9371 39.3402 35.7339 39.5434C35.5308 39.7465 35.4166 40.0221 35.4166 40.3094C35.4166 40.5967 35.5308 40.8723 35.7339 41.0754C35.9371 41.2786 36.2126 41.3927 36.5 41.3927Z" fill="#0e1317"/><path d="M48.4166 43.5591H36.5C36.2126 43.5591 35.9371 43.6732 35.7339 43.8764C35.5308 44.0795 35.4166 44.3551 35.4166 44.6424C35.4166 44.9297 35.5308 45.2053 35.7339 45.4084C35.9371 45.6116 36.2126 45.7257 36.5 45.7257H48.4166C48.7039 45.7257 48.9795 45.6116 49.1827 45.4084C49.3858 45.2053 49.5 44.9297 49.5 44.6424C49.5 44.3551 49.3858 44.0795 49.1827 43.8764C48.9795 43.6732 48.7039 43.5591 48.4166 43.5591Z" fill="#0e1317"/></svg></a>
+            <div class="omni-list">
+                <div class="omni-list-top"></div>
+                <div class="omni-list-item"><a href="#"><img src="images/omni-link-01.svg" alt="" /></a></div>
+                <div class="omni-list-item"><a href="#"><img src="images/omni-link-02.svg" alt="" /></a></div>
+                <div class="omni-list-item"><a href="#"><img src="images/omni-link-03.svg" alt="" /></a></div>
+                <div class="omni-list-item omni-list-item-sep"><a href="#"><img src="images/omni-link-04.svg" alt="" /></a></div>
+                <div class="omni-list-item"><a href="#"><img src="images/omni-link-05.svg" alt="" /></a></div>
+                <div class="omni-list-item"><a href="#"><img src="images/omni-link-06.svg" alt="" /></a></div>
+                <div class="omni-list-item omni-list-item-sep"><a href="#"><img src="images/omni-link-07.svg" alt="" /></a></div>
+                <div class="omni-list-item omni-list-item-message"><a href="#"><img src="images/omni-link-08.svg" alt="" /></a></div>
+                <div class="omni-list-item omni-list-item-phone"><a href="#"><img src="images/omni-link-09.svg" alt="" /></a></div>
+                <div class="omni-list-bottom"></div>
+            </div>
+        </div>
 
         <script>
             var pathTemplate = './';
@@ -824,7 +908,10 @@
         <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/clipboard.min.js"></script>
         <script src="js/jquery.easing.min.js"></script>
-        <script src="js/tools.js"></script>
+        <script src="js/shuffle.min.js"></script>
+        <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/general.js"></script>
+        <script src="js/public.js"></script>
 
     </body>
 </html>
