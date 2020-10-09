@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="js/select2/select2.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
-        <link rel="stylesheet" href="js/magnific-popup/magnific-popup.css" />
 
         <link rel="icon" type="image/png" href="favicon.png" />
 
@@ -27,13 +26,23 @@
                     <div class="container">
                         <div class="logo"></div>
 
-                        <div class="header-title">Аутсорсинг легкой промышленности</div>
-
                         <div class="header-menu">
                             <ul>
+                                <li class="with-submenu active">
+                                    <a href="#">Bee-online</a>
+                                    <ul>
+                                        <li><a href="/#welcome" class="page-link">О платформе</a></li>
+                                        <li><a href="/#faq" class="page-link">Вопросы</a></li>
+                                        <li><a href="/#news" class="page-link">Новости</a></li>
+                                        <li><a href="/#exhibitors" class="page-link">Для экспонентов</a></li>
+                                        <li><a href="/#visitors" class="page-link">Для посетителей</a></li>
+                                        <li><a href="/#partners" class="page-link">Партнеры</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Экспоненты</a></li>
                                 <li><a href="#">Для посетителей</a></li>
                                 <li><a href="#">Для участников</a></li>
-                                <li><a href="#">Архив</a></li>
+                                <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Контакты</a></li>
                             </ul>
                         </div>
@@ -45,11 +54,12 @@
                         </div>
 
                         <div class="header-lang">
-                            <a href="#" class="header-lang-link">En</a>
+                            <a href="#" class="header-lang-link lang-list-ru"></a>
                             <ul>
-                                <li class="active"><a href="#">En</a></li>
-                                <li><a href="#">Ru</a></li>
-                                <li><a href="#">Fr</a></li>
+                                <li class="active" data-google-lang="ru"><a href="#" class="lang-list-ru"></a></li>
+                                <li data-google-lang="en"><a href="#" class="lang-list-en"></a></li>
+                                <li data-google-lang="it"><a href="#" class="lang-list-it"></a></li>
+                                <li data-google-lang="fr"><a href="#" class="lang-list-fr"></a></li>
                             </ul>
                         </div>
 
@@ -67,11 +77,12 @@
                             </div>
 
                             <div class="mobile-menu-header-lang">
-                                <a href="#" class="mobile-menu-header-lang-link">En</a>
+                                <a href="#" class="mobile-menu-header-lang-link lang-list-ru"></a>
                                 <ul>
-                                    <li class="active"><a href="#">En</a></li>
-                                    <li><a href="#">Ru</a></li>
-                                    <li><a href="#">Fr</a></li>
+                                    <li class="active" data-google-lang="ru"><a href="#" class="lang-list-ru"></a></li>
+                                    <li data-google-lang="en"><a href="#" class="lang-list-en"></a></li>
+                                    <li data-google-lang="it"><a href="#" class="lang-list-it"></a></li>
+                                    <li data-google-lang="fr"><a href="#" class="lang-list-fr"></a></li>
                                 </ul>
                             </div>
 
@@ -81,38 +92,64 @@
                         <div class="mobile-menu-content">
                             <div class="mobile-menu-list">
                                 <ul>
-                                    <li class="active"><a href="#">Для посетителей</a></li>
+                                    <li class="active">
+                                        <a href="#">Bee-together</a>
+                                        <ul>
+                                            <li><a href="/#welcome" class="page-link">О платформе</a></li>
+                                            <li><a href="/#faq" class="page-link">Вопросы</a></li>
+                                            <li><a href="/#news" class="page-link">Новости</a></li>
+                                            <li><a href="/#exhibitors" class="page-link">Для экспонентов</a></li>
+                                            <li><a href="/#visitors" class="page-link">Для посетителей</a></li>
+                                            <li><a href="/#partners" class="page-link">Партнеры</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Экспоненты</a></li>
+                                    <li><a href="#">Для посетителей</a></li>
                                     <li><a href="#">Для участников</a></li>
-                                    <li><a href="#">Архив</a></li>
+                                    <li><a href="#">FAQ</a></li>
                                     <li><a href="#">Контакты</a></li>
                                 </ul>
                             </div>
                             <div class="mobile-menu-visit"><a href="#" class="btn btn-mini"><img src="images/mobile-menu-visit.svg" alt="" />Посетить</a></div>
                             <div class="mobile-menu-contacts">
-                                <div class="mobile-menu-contacts-item">
-                                    <div class="mobile-menu-contacts-item-photo"><img src="files/mobile-menu-contacts-1.jpg" alt="" /></div>
-                                    <div class="mobile-menu-contacts-item-content">
-                                        <div class="mobile-menu-contacts-item-name">Анастасия</div>
-                                        <div class="mobile-menu-contacts-item-value"><a href="mailto:adv@profashion.ru">adv@profashion.ru</a></div>
-                                        <div class="mobile-menu-contacts-item-value"><a href="tel:+79255002881">+7 (925) 500-28-81</a></div>
-                                        <div class="mobile-menu-contacts-item-social">
-                                            <a href="#"><img src="images/mobile-menu-contacts-social-1.svg" alt="" /></a>
-                                            <a href="#"><img src="images/mobile-menu-contacts-social-2.svg" alt="" /></a>
-                                            <a href="#"><img src="images/mobile-menu-contacts-social-3.svg" alt="" /></a>
+                                <div class="contacts-item">
+                                    <div class="contacts-item-inner">
+                                        <div class="contacts-item-content">
+                                            <div class="contacts-item-photo"><img src="files/contacts-02.jpg" alt="" /></div>
+                                            <div class="contacts-item-text">
+                                                <div class="contacts-item-name">Алёна</div>
+                                                <div class="contacts-item-phone"><a href="tel:+79299688858">+7 (929) 968-88-58</a></div>
+                                                <div class="contacts-item-email"><a href="mailto:promo@profashion.ru">promo@profashion.ru</a></div>
+                                            </div>
+                                            <div class="contacts-item-mobile">
+                                                <div class="contacts-item-mobile-inner">
+                                                    <a href="https://telegram.im/@struevvs" class="_blank"><img src="images/contacts-item-icon-1.svg" alt="" /></a>
+                                                    <a href="viber://chat?number=79255002881"><img src="images/contacts-item-icon-2.svg" alt="" /></a>
+                                                    <a href="https://wa.me/79255002881" class="_blank"><img src="images/contacts-item-icon-3.svg" alt="" /></a>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="contacts-item-mobile-link"></a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="mobile-menu-contacts-item">
-                                    <div class="mobile-menu-contacts-item-photo"><img src="files/mobile-menu-contacts-2.jpg" alt="" /></div>
-                                    <div class="mobile-menu-contacts-item-content">
-                                        <div class="mobile-menu-contacts-item-name">Юлия</div>
-                                        <div class="mobile-menu-contacts-item-value"><a href="mailto:adv@profashion.ru">adv@profashion.ru</a></div>
-                                        <div class="mobile-menu-contacts-item-value"><a href="tel:+79255002881">+7 (925) 500-28-81</a></div>
-                                        <div class="mobile-menu-contacts-item-social">
-                                            <a href="#"><img src="images/mobile-menu-contacts-social-1.svg" alt="" /></a>
-                                            <a href="#"><img src="images/mobile-menu-contacts-social-2.svg" alt="" /></a>
-                                            <a href="#"><img src="images/mobile-menu-contacts-social-3.svg" alt="" /></a>
+                                <div class="contacts-item">
+                                    <div class="contacts-item-inner">
+                                        <div class="contacts-item-content">
+                                            <div class="contacts-item-photo"><img src="files/contacts-03.jpg" alt="" /></div>
+                                            <div class="contacts-item-text">
+                                                <div class="contacts-item-name">Юлия</div>
+                                                <div class="contacts-item-phone"><a href="tel:+79255002881">+7 (925) 500-28-81</a></div>
+                                                <div class="contacts-item-email"><a href="mailto:adv1@profashion.ru">adv1@profashion.ru</a></div>
+                                            </div>
+                                            <div class="contacts-item-mobile">
+                                                <div class="contacts-item-mobile-inner">
+                                                    <a href="https://telegram.im/@struevvs" class="_blank"><img src="images/contacts-item-icon-1.svg" alt="" /></a>
+                                                    <a href="viber://chat?number=79255002881"><img src="images/contacts-item-icon-2.svg" alt="" /></a>
+                                                    <a href="https://wa.me/79255002881" class="_blank"><img src="images/contacts-item-icon-3.svg" alt="" /></a>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="contacts-item-mobile-link"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -121,6 +158,8 @@
                                     <a href="#"><img src="images/social-fb.svg" alt="" /></a>
                                     <a href="#"><img src="images/social-yt.svg" alt="" /></a>
                                     <a href="#"><img src="images/social-vk.svg" alt="" /></a>
+                                    <a href="#"><img src="images/social-insta.svg" alt="" /></a>
+                                    <a href="#"><img src="images/social-telegram.svg" alt="" /></a>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +177,7 @@
                 <!-- main slider END -->
 
                 <!-- main welcome -->
-                <div class="main-welcome">
+                <div class="main-welcome" id="welcome">
                     <div class="container">
                         <h1>BEE-TOGETHER.ru — <span>выставка-платформа,<br /> где&nbsp;можно найти все контакты,</span><br /> необходимые для работы в сфере fashion</h1>
 
@@ -313,7 +352,7 @@
                 <!-- main scheme END -->
 
                 <!-- main news -->
-                <div class="main-news">
+                <div class="main-news" id="news">
                     <div class="container">
                         <h2>Последние новости</h2>
                         <div class="main-news-container">
@@ -2647,7 +2686,7 @@
                 <!-- main reviews END -->
 
                 <!-- main partners -->
-                <div class="main-partners">
+                <div class="main-partners" id="partners">
                     <div class="container">
                         <h2>Партнеры</h2>
 
@@ -2841,6 +2880,8 @@
                         <a href="#"><img src="images/social-fb.svg" alt="" /></a>
                         <a href="#"><img src="images/social-yt.svg" alt="" /></a>
                         <a href="#"><img src="images/social-vk.svg" alt="" /></a>
+                        <a href="#"><img src="images/social-insta.svg" alt="" /></a>
+                        <a href="#"><img src="images/social-telegram.svg" alt="" /></a>
                     </div>
 
                     <div class="footer-bottom">
@@ -2892,9 +2933,10 @@
         <script src="js/clipboard.min.js"></script>
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/shuffle.min.js"></script>
-        <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.cookie.js"></script>
         <script src="js/general.js"></script>
         <script src="js/public.js"></script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
 
     </body>
 </html>

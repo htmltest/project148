@@ -295,22 +295,6 @@ $(document).ready(function() {
         }
     });
 
-    $.extend(true, $.magnificPopup.defaults, {
-        tClose: 'Закрыть (Esc)',
-        tLoading: 'Загрузка...',
-        gallery: {
-            tPrev: 'Предыдущая',
-            tNext: 'Следующая',
-            tCounter: '%curr% из %total%'
-        },
-        image: {
-            tError: '<a href="%url%">Изображение</a> не может быть загружено.'
-        },
-        ajax: {
-            tError: '<a href="%url%">Контент</a> не может быть загружен.'
-        }
-    });
-
     $('body').on('click', '.archive-card-descr-more a', function(e) {
         $('.archive-card-descr-container').toggleClass('open');
         e.preventDefault();
@@ -496,7 +480,7 @@ $(document).ready(function() {
         $('.window-online-date-list .archive-card-days-date').removeClass('current');
         $('.window-online-date-list input:checked').parents().filter('.archive-card-days-date').addClass('current');
     });
-
+    
     $('body').on('change', '.window-online-time-list input', function(e) {
         $('.window-online-time h3 .error').removeClass('visible');
     });
@@ -550,6 +534,13 @@ $(document).ready(function() {
             $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight() - 20});
             e.preventDefault();
         }
+    });
+    
+    $('body').on('click', 'a.archive-card-days-date', function(e) {
+        var curBlock = $(this).parents().filter('.archive-card-days');
+        var curDateIndex = curBlock.find('a.archive-card-days-date').index($(this));
+        $('body').attr('data-clicked', curDateIndex);
+        e.preventDefault();
     });
 
 });

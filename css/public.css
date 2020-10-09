@@ -16,7 +16,7 @@
     .mobile-menu-visit .btn img {display:inline-block; vertical-align:middle; margin:-6px 13px 0 0}
 }
 
-.main-slider {position:absolute; right:0; top:0; width:907px; height:1000px; overflow:hidden; z-index:-1}
+.main-slider {position:absolute; right:0; top:-200px; width:907px; height:1000px; overflow:hidden; z-index:-1}
 .main-slider-item {position:absolute; left:0; top:0; width:100%; height:100%}
 .main-slider-item svg {width:810px; height:893px; position:absolute; right:0; top:0}
 .main-slider-item.active {z-index:2}
@@ -38,6 +38,14 @@
 .main-slider-item.active .main-slider-hexagon-7 {opacity:0.7}
 .main-slider-item.active .main-slider-hexagon-8 {opacity:0.8}
 .main-slider-item.active .main-slider-hexagon-9 {opacity:0.6}
+
+@media screen and (max-width:1600px) {
+    .main-slider {right:-100px}
+}
+
+@media screen and (max-width:1400px) {
+    .main-slider {right:-200px}
+}
 
 @media screen and (max-width:1169px) {
     .main-slider {display:none}
@@ -912,10 +920,10 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 
 .catalogue-card-my {display:table; margin:22px 0 0 0; white-space:nowrap}
 .catalogue-card-my-headers {display:table-row}
-.catalogue-card-my-header {display:table-cell; vertical-align:top; padding:0 0 7px 25px; color:#81a2b0; font-weight:normal; font-size:10px; line-height:15px; letter-spacing:0.03em; text-transform:uppercase}
+.catalogue-card-my-header {display:table-cell; vertical-align:top; padding:0 0 7px 50px; color:#81a2b0; font-weight:normal; font-size:10px; line-height:15px; letter-spacing:0.03em; text-transform:uppercase}
 .catalogue-card-my-header:first-child {padding-left:0}
 .catalogue-card-my-row {display:table-row}
-.catalogue-card-my-cell {display:table-cell; vertical-align:top; padding:10px 0 10px 25px; border-top:1px solid #e7e7e7}
+.catalogue-card-my-cell {display:table-cell; vertical-align:top; padding:10px 0 10px 50px; border-top:1px solid #e7e7e7}
 .catalogue-card-my-cell:first-child {padding-left:0}
 .catalogue-card-my-cell-title-mobile {display:none}
 .catalogue-card-my-date {font-weight:500}
@@ -948,16 +956,16 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .archive-card-days-week-item {float:left; width:14.28%; height:44px}
 .archive-card-days-dates {padding:4px 10px 10px 10px; font-weight:600; font-size:15px; line-height:44px; color:#8f9bb3; text-align:center}
 .archive-card-days-dates::after {content:""; display:block; clear:both}
-.archive-card-days-date {float:left; width:14.28%; height:44px}
+.archive-card-days-date {float:left; width:14.28%; height:44px; text-decoration:none}
 .archive-card-days-date.other {opacity:0.2}
 .archive-card-days-date.weekend {color:#c86666}
 .archive-card-days-date.weekend.other {color:#8f9bb3}
-.archive-card-days-date.active {color:#000; position:relative}
+.archive-card-days-date.active {color:#000; position:relative; cursor:pointer}
 .archive-card-days-date.active::after {content:""; display:block; position:absolute; left:50%; top:50%; width:49px; height:51px; margin:-27px 0 0 -24.5px; z-index:-1; background:url(../images/archive-card-days-date-active.svg) no-repeat; pointer-events:none}
 @media screen and (min-width:1170px) {
     .archive-card-days-date.active:hover::after {background-image:url(../images/archive-card-days-date-hover.svg)}
 }
-.archive-card-days-date.current {color:#fff; position:relative}
+.archive-card-days-date.current {color:#fff; position:relative; cursor:pointer}
 .archive-card-days-date.current::after {content:""; display:block; position:absolute; left:50%; top:50%; width:49px; height:51px; margin:-27px 0 0 -24.5px; z-index:-1; background:url(../images/archive-card-days-date-current.svg) no-repeat; pointer-events:none}
 @media screen and (min-width:1170px) {
     .archive-card-days-date.current:hover::after {background-image:url(../images/archive-card-days-date-current.svg)}
