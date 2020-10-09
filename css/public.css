@@ -722,6 +722,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 
 @media screen and (max-width:1169px) {
     .visitors-sections {margin:100px 0 0 0}
+    .visitors-sections .main-catalogue-btn {padding-bottom:50px}
 }
 
 .visitors-reviews {margin:73px 0 0 0; position:relative}
@@ -2021,38 +2022,6 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .fonts-loaded .main-types-reg-title {font-family:Lato, sans-serif}
     .main-types-reg-btn {margin:31px 0 0 0}
     .main-types-reg-btn .btn::after {display:none}
-}
-
-.event-cards {margin:168px 0 0 0}
-.event-cards h2 {margin:0; padding:0}
-.event-cards-tabs {margin:21px 0 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
-.event-cards-tabs-title {display:inline-block; vertical-align:top; margin:10px 10px 0 10px; font-size:16px; line-height:34px; letter-spacing:0; white-space:nowrap; color:#403f3f}
-.event-cards-tabs-item {display:inline-block; vertical-align:top; margin:10px 0 0 10px; font-weight:normal; font-size:16px; line-height:34px; letter-spacing:0; white-space:nowrap; color:#403f3f; text-decoration:none; background:#f7f2da; padding:0 10px}
-.event-cards-tabs-item:hover,
-.event-cards-tabs-item.active {color:#000; background:#fcdf66}
-
-@media screen and (max-width:1169px) {
-    .event-cards {margin:80px 0 0 0}
-    .event-cards-tabs {display:none}
-}
-
-.event-cards-tabs-container {position:relative}
-.event-cards-tabs-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, transform 0.75s ease; transform:translateY(20px)}
-.event-cards-tabs-content.active {position:relative; left:auto; top:auto; opacity:1; transform:translateY(0)}
-.event-cards-tabs-content-title {display:none}
-
-@media screen and (max-width:1169px) {
-    .event-cards-tabs-content {position:relative; left:auto; top:auto; opacity:1; transform:none; margin:0 0 -1px 0}
-    .event-cards-tabs-content-title {display:block; margin:0 -20px; padding:34px 85px 32px 20px; border:1px solid #d0d0d0; font-size:24px; line-height:35px; cursor:pointer; font-weight:normal; color:#000; background:#fef8dc; position:relative}
-    .fonts-loaded .event-cards-tabs-content-title {font-family:FiraSans, sans-serif}
-    .event-cards-tabs-content-title::after {content:""; display:block; position:absolute; right:19px; top:50%; width:46px; height:46px; background:url(../images/tabs-content-title.svg) no-repeat; margin-top:-23px}
-    .event-cards-tabs-content.open .event-cards-tabs-content-title::after {transform:rotate(180deg)}
-    .event-cards-tabs-content-inner {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.45s ease}
-    .event-cards-tabs-content.open .event-cards-tabs-content-inner {position:relative; left:auto; top:auto; opacity:1}
-}
-
-@media screen and (max-width:1169px) {
-    .event-cards-tabs-content-inner .catalogue-list {margin:40px 0 50px 0}
 }
 
 .reviews {margin:30px 0 120px 0; border-bottom:1px solid #e0e0e0; max-width:870px}
