@@ -1347,10 +1347,6 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue::before {content:""; display:block; position:absolute; left:276px; top:0; bottom:0; width:1px; background:#ead270}
 .catalogue::after {content:""; display:block; clear:both}
 
-@media screen and (max-width:1439px) {
-    .catalogue::before {left:325px}
-}
-
 @media screen and (max-width:1169px) {
     .catalogue {margin:0; padding:163px 0 0 0}
     .catalogue::before {display:none}
@@ -1373,10 +1369,6 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-search-submit button svg {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%)}
 .catalogue-search-submit button path {fill:rgba(128, 128, 128, 0.8); transition:all 0.2s}
 .catalogue-search-submit button:hover path {fill:#171717}
-
-@media screen and (max-width:1439px) {
-    .catalogue-filter {width:326px}
-}
 
 @media screen and (max-width:1169px) {
     .catalogue-filter {float:none; width:auto; min-height:0; padding:90px 0 0 0; position:relative}
@@ -1515,12 +1507,8 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .catalogue-filter-reset button {font-size:20px; line-height:30px; height:30px}
 }
 
-.catalogue-container {margin:0 112px 0 360px}
+.catalogue-container {margin:0 40px 0 317px}
 .catalogue-container-inner {float:left; width:100%}
-
-@media screen and (max-width:1439px) {
-    .catalogue-container {margin:0 40px 0 367px}
-}
 
 @media screen and (max-width:1169px) {
     .catalogue-container {margin:43px 0 0 0}
@@ -1667,6 +1655,10 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-item-view {padding:0 0 0 16px; background:url(../images/icon-view.svg) no-repeat left center; font-size:12px; line-height:18px; letter-spacing:0; color:#222; font-weight:normal}
 .catalogue-item-places {padding:0 0 0 16px; text-align:left; background:url(../images/catalogue-item-places.svg) no-repeat left center; font-size:12px; line-height:18px; letter-spacing:0; color:#222; font-weight:normal; position:relative}
 .catalogue-item-view+.catalogue-item-places {margin:3px 0 0 0}
+
+@media screen and (min-width:1555px) {
+    .catalogue-container .catalogue-item {width:25%}
+}
 
 @media screen and (max-width:1169px) {
     .catalogue-list {margin:40px 20px 0 20px}
