@@ -543,6 +543,67 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.news-share-item a', function(e) {
+        var curLink = $(this);
+        var curSocial = curLink.parent().parent();
+        var curTitle = encodeURIComponent(curSocial.data('title'));
+        var curDescription = encodeURIComponent(curSocial.data('description'));
+        var curUrl = encodeURIComponent(curSocial.data('url'));
+
+		switch (curLink.data('id')) {
+			case 'fb':
+				popupCenter('https://www.facebook.com/sharer/sharer.php?u=' + curUrl, curTitle);
+				break;
+
+			case 'vk':
+				popupCenter('https://vk.com/share.php?url=' + curUrl + '&description=' + curTitle + '. ' + curDescription, curTitle);
+				break;
+
+			case 'tw':
+				var text = curTitle || curDescription || '';
+				if (curTitle.length > 0 && curDescription.length > 0) text = curTitle + ' - ' + curDescription;
+				if (curDescription.length > 0) text = '&text=' + text;
+				popupCenter('https://twitter.com/intent/tweet?url=' + curUrl + text, curTitle);
+				break;
+
+            default:
+				break;
+		}
+
+        e.preventDefault();
+    });
+
+    function popupCenter(url, title) {
+        var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
+        var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+        var left = ((width / 2) - (480 / 2)) + dualScreenLeft;
+        var top = ((height / 3) - (360 / 3)) + dualScreenTop;
+        var newWindow = window.open(url, title, 'scrollbars=yes, width=' + 480 + ', height=' + 360 + ', top=' + top + ', left=' + left);
+        if (window.focus) {
+            newWindow.focus();
+        }
+    }
+
+    $('body').on('click', '.window-photo-social-item-fb', function(e) {
+        var curTitle = encodeURIComponent($('title').html());
+        var curUrl = encodeURIComponent(window.location.href);
+
+        popupCenter('https://www.facebook.com/sharer/sharer.php?u=' + curUrl, curTitle);
+
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.window-photo-social-item-vk', function(e) {
+        var curTitle = encodeURIComponent($('title').html());
+        var curUrl = encodeURIComponent(window.location.href);
+
+        popupCenter('https://vk.com/share.php?url=' + curUrl + '&description=' + curTitle, curTitle);
+
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {
