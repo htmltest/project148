@@ -179,6 +179,13 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.catalogue-filter-group-all').each(function() {
+        var curBlock = $(this).parent();
+        if (curBlock.find('> .catalogue-filter-item').length > 6) {
+            $(this).addClass('visible');
+        }
+    });
+
     $('body').on('change', '.catalogue-view input', function(e) {
         $('.catalogue-list').stop(true, true).animate({'opacity': 0}, 150, 'easeInQuad', function() {
             if ($('#catalogue-view-rows').prop('checked')) {
@@ -219,7 +226,10 @@ $(document).ready(function() {
             var curBlock = $(this).parents().filter('.catalogue-filter-item');
             curBlock.find('.catalogue-filter-item-sub .catalogue-filter-item input').prop('checked', false);
         }
+        updateMobileFilter();
     });
+
+    updateMobileFilter();
 
     $('body').on('change', '.catalogue-filter-item-sub .catalogue-filter-item input', function(e) {
         var curBlock = $(this).parent().parent().parent().parent().parent();
@@ -234,6 +244,14 @@ $(document).ready(function() {
         $('.catalogue-list').addClass('loading');
         var curForm = $('.catalogue-filter-container form');
         var formData = new FormData(curForm[0]);
+
+        if (typeof (history.pushState) !== undefined) {
+            var historyData = curForm.serialize();
+            if ($('.pager').length > 0 && $('.pager a:not(.pager-prev, .pager-next)').index($('.pager a.active'))) {
+                historyData += '&PAGEN_1=' + $('.pager a.active').html();
+            }
+            history.pushState(null, null, curForm.attr('action') + '?' + historyData);
+        }
 
         $.ajax({
             type: 'POST',
@@ -251,6 +269,153 @@ $(document).ready(function() {
             $('.catalogue-list').removeClass('loading');
             $(window).trigger('resize');
         });
+        updateMobileFilter();
+    });
+
+    $('.catalogue-search form').each(function() {
+        var curForm = $(this);
+        var validator = curForm.validate();
+        if (validator) {
+            validator.destroy();
+        }
+        curForm.validate({
+            ignore: '',
+            submitHandler: function(form) {
+                $('.catalogue-list').addClass('loading');
+                var formData = new FormData(curForm[0]);
+                $.ajax({
+                    type: 'POST',
+                    url: curForm.attr('action'),
+                    processData: false,
+                    contentType: false,
+                    dataType: 'html',
+                    data: formData,
+                    cache: false
+                }).done(function(html) {
+                    html = '<div>' + html + '</div>';
+                    $('.catalogue-list').html($(html).find('.catalogue-list').html());
+                    $('.catalogue-count strong').eq(0).html($(html).find('.catalogue-list').attr('count_filter'));
+                    $('.pager').html($(html).find('.pager').html());
+                    $(window).trigger('resize');
+                    $('.catalogue-list').removeClass('loading');
+                    $('html, body').animate({'scrollTop': $('.catalogue-list').offset().top - $('header').outerHeight() - 20});
+                });
+            }
+        });
+    });
+
+    $('body').on('click', '.catalogue-filter-reset button', function(e) {
+        $('.catalogue-filter input[type="text"]').val('');
+        $('.catalogue-filter input[type="checkbox"]').prop('checked', false);
+        $('.catalogue-filter-container input[type="checkbox"]').eq(0).trigger('change');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.catalogue-container .pager a', function(e) {
+        $('.catalogue-list').addClass('loading');
+
+        if ($('.pager').length > 0) {
+            var curPage = $('.pager a.active');
+            var curPageIndex = $('.pager a:not(.pager-prev, .pager-next)').index(curPage);
+            if (!$(this).hasClass('pager-prev') && !$(this).hasClass('pager-next')) {
+                curPageIndex = $('.pager a:not(.pager-prev, .pager-next)').index($(this));
+            }
+            if ($(this).hasClass('pager-prev') && curPageIndex > 0) {
+                curPageIndex--;
+            }
+            if ($(this).hasClass('pager-next') && curPageIndex < $('.pager a:not(.pager-prev, .pager-next)').length - 1) {
+                curPageIndex++;
+            }
+            curPage = $('.pager a:not(.pager-prev, .pager-next)').eq(curPageIndex);
+            console.log(curPage.html());
+        }
+
+        var curForm = $('.catalogue-filter-container form');
+        var formData = new FormData(curForm[0]);
+
+        if (typeof (history.pushState) !== undefined) {
+            var historyData = curForm.serialize();
+            if ($('.pager').length > 0) {
+                historyData += '&PAGEN_1=' + curPage.html();
+            }
+            history.pushState(null, null, curForm.attr('action') + '?' + historyData.replace('&ajaxfilter=Y', '').replace('&amp;ajaxfilter=Y', '').replace('?ajaxfilter=Y&', '?').replace('ajaxfilter=Y', ''));
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: $(curForm).attr('action'),
+            processData: false,
+            contentType: false,
+            dataType: 'html',
+            data: formData,
+            cache: false
+        }).done(function(html) {
+            html = '<div>' + html + '</div>';
+            $('.catalogue-list').html($(html).find('.catalogue-list').html());
+            $('.catalogue-count strong').eq(0).html($(html).find('.catalogue-list').attr('count_filter'));
+            $('.pager').html($(html).find('.pager').html());
+            $(window).trigger('resize');
+            $('.catalogue-list').removeClass('loading');
+        });
+        e.preventDefault();
+    });
+
+    $('.catalogue-container').each(function() {
+        $('.catalogue-list').addClass('loading');
+        var curForm = $('.catalogue-filter-container form');
+        var formData = new FormData(curForm[0]);
+
+        if (typeof (history.pushState) !== undefined) {
+            var historyData = curForm.serialize();
+            if ($('.pager').length > 0 && $('.pager a:not(.pager-prev, .pager-next)').index($('.pager a.active'))) {
+                historyData += '&PAGEN_1=' + $('.pager a.active').html();
+            }
+            history.pushState(null, null, curForm.attr('action') + '?' + historyData);
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: $(curForm).attr('action'),
+            processData: false,
+            contentType: false,
+            dataType: 'html',
+            data: formData,
+            cache: false
+        }).done(function(html) {
+            html = '<div>' + html + '</div>';
+            $('.catalogue-list').html($(html).find('.catalogue-list').html());
+            $('.catalogue-count strong').eq(0).html($(html).find('.catalogue-list').attr('count_filter'));
+            $('.pager').html($(html).find('.pager').html());
+            $(window).trigger('resize');
+            $('.catalogue-list').removeClass('loading');
+        });
+        updateMobileFilter();
+    });
+
+    $('.catalogue-filter-mobile-ctrl .btn').click(function(e) {
+        var curLink = $(this);
+        if (curLink.hasClass('active')) {
+            curLink.removeClass('active');
+            if (curLink.hasClass('catalogue-filter-mobile-link')) {
+                $('.catalogue-filter-container').removeClass('visible');
+                $('.catalogue-filter-title').removeClass('visible');
+            } else {
+                $('.catalogue-search').removeClass('visible');
+            }
+        } else {
+            $('.catalogue-filter-mobile-ctrl .btn.active').removeClass('active');
+            curLink.addClass('active');
+            if (curLink.hasClass('catalogue-filter-mobile-link')) {
+                $('.catalogue-search').removeClass('visible');
+                $('.catalogue-filter-container').addClass('visible');
+                $('.catalogue-filter-title').addClass('visible');
+            } else {
+                $('.catalogue-filter-container').removeClass('visible');
+                $('.catalogue-filter-title').removeClass('visible');
+                $('.catalogue-search').addClass('visible');
+            }
+        }
+        e.preventDefault();
     });
 
     $('body').on('click', '.window-catalogue-descr-more a', function(e) {
@@ -861,3 +1026,19 @@ $(window).on('load', function() {
         });
     });
 });
+
+function updateMobileFilter() {
+    $('.catalogue-filter-group').each(function() {
+        var curGroup = $(this);
+        curGroup.find('.catalogue-filter-group-header-options').html('');
+        curGroup.find('.catalogue-filter-item input:checked').each(function() {
+            var curItem = $(this).parent().parent();
+            if (curItem.hasClass('catalogue-filter-item')) {
+                curGroup.find('.catalogue-filter-group-header-options').append('<div class="catalogue-filter-group-header-option"><div class="catalogue-filter-group-header-option-inner">' + curItem.find('> label > span').html() + '</div></div>');
+            }
+            if (curItem.is('label')) {
+                curGroup.find('.catalogue-filter-group-header-options').append('<div class="catalogue-filter-group-header-option"><div class="catalogue-filter-group-header-option-inner">' + curItem.find('> .catalogue-filter-item-sub-inner > span').html() + '</div></div>');
+            }
+        });
+    });
+}

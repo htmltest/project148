@@ -181,24 +181,36 @@ $(document).ready(function() {
         $('.header-menu > ul').append('<li class="header-menu-hover"></li>');
         var $navActive = $('.header-menu .header-menu-hover');
 
-        $navActive.data('origLeft', 0).data('origWidth', 0);
+        if ($('.header-menu > ul > li.active').length > 0) {
+            $navActive
+                .width($('.header-menu > ul > li.active').width())
+                .css('left', $('.header-menu > ul > li.active').offset().left - $('.header-menu > ul').offset().left)
+                .data('origLeft', $navActive.position().left)
+                .data('origWidth', $navActive.width());
+        } else {
+            $navActive
+                .data('origLeft', 0)
+                .data('origWidth', 0);
+        }
 
-        $('.header-menu > ul > li > a').on('mouseover', function() {
-            var $el = $(this);
-            var leftPos = $el.parent().offset().left - $el.parent().parent().offset().left;
-            var newWidth = $el.parent().outerWidth();
-            $navActive.css({
-                left: leftPos,
-                width: newWidth
-            });
-        });
+        $('.header-menu > ul > li > a').hover(
+            function() {
+                var $el = $(this);
+                var leftPos = $el.parent().offset().left - $('.header-menu > ul').offset().left;
+                var newWidth = $el.parent().width();
+                $navActive.stop().animate({
+                    left: leftPos,
+                    width: newWidth
+                });
+            },
 
-        $('.header-menu > ul > li > a').on('mouseout', function() {
-            $navActive.css({
-                left: $navActive.data('origLeft'),
-                width: $navActive.data('origWidth')
-            });
-        });
+            function() {
+                $navActive.stop().animate({
+                    left: $navActive.data('origLeft'),
+                    width: $navActive.data('origWidth')
+                });
+            }
+        );
     });
 
     $('.up-link').click(function(e) {

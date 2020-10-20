@@ -1372,9 +1372,8 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-search-submit button:hover path {fill:#171717}
 
 @media screen and (max-width:1169px) {
-    .catalogue-filter {float:none; width:auto; min-height:0; padding:90px 0 0 0; position:relative}
+    .catalogue-filter {float:none; width:auto; min-height:0; padding:0; position:relative}
     .catalogue-filter-title {border-top:none; border-bottom:none; background:none; padding:0 20px; font-weight:500; font-size:24px; line-height:36px}
-    .catalogue-search {padding:0; position:absolute; left:20px; top:0; right:20px}
     .catalogue-search-input input {height:50px; font-size:18px; line-height:27px; padding:10px 38px 11px 14px}
     .catalogue-search-submit button {width:50px; height:50px}
 }
@@ -1390,6 +1389,7 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-filter-group-header img {display:block; position:absolute; left:0; top:12px; transform:translateY(-50%); line-height:0}
 .catalogue-filter-group-header::after {content:""; display:block; width:14px; height:9px; background:url(../images/catalogue-filter-arrow.svg) no-repeat; position:absolute; right:0; top:9px; transition:transform 0.2s}
 .catalogue-filter-group.open .catalogue-filter-group-header::after {transform:rotate(-180deg)}
+.catalogue-filter-group-header-options {display:none}
 .catalogue-filter-group-container {position:absolute; left:-9999px; top:-9999px; width:100%; padding:12px 0 5px 0; opacity:0; transition:opacity 0.5s}
 .catalogue-filter-group.open .catalogue-filter-group-container {position:relative; left:auto; top:auto; opacity:1; transition:opacity 0.5s}
 .catalogue-filter-item {margin:5px 0 0 0; font-size:14px; line-height:21px; color:#222}
@@ -1430,13 +1430,22 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-filter-item-sub .catalogue-filter-item input:checked+span+.catalogue-filter-item-sub-status::before {content:""; display:block; width:9px; height:9px; position:absolute; right:10px; top:50%; margin-top:-4.5px; background:url(../images/catalogue-filter-item-sub-remove.svg) no-repeat; z-index:1}
 .catalogue-filter-item-sub-inner {position:relative; display:inline-block; vertical-align:top; max-width:calc(100% - 10px)}
 
+.catalogue-filter-mobile-ctrl {display:none}
+
 @media screen and (max-width:1169px) {
     .catalogue-filter-container {margin:20px 0 0 0; padding:0; border-top:1px solid #cfcfcf}
     .catalogue-filter-group {margin:0}
     .catalogue-filter-group.open {border-bottom:1px solid #cfcfcf}
     .catalogue-filter-group-header {padding:12px 0 10px 54px; border-bottom:1px solid #cfcfcf; background:#fef8dc; font-size:20px; line-height:30px; color:#000}
-    .catalogue-filter-group-header img {left:20px; transform:translateY(-50%) scale(1.17)}
+    .catalogue-filter-group-header img {left:20px; top:25px; transform:translateY(-50%) scale(1.17)}
     .catalogue-filter-group-header::after {right:27px; top:22px; width:17px; height:11px; background-size:100%}
+    .catalogue-filter-group-header-options {display:block; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:0 0 0 -34px}
+    .catalogue-filter-group-header-options::after {content:""; display:block; position:absolute; right:0; top:0; bottom:0; width:59px; background:linear-gradient(-90deg, #fef8dc 0%, rgba(254, 248, 220, 0) 100%)}
+    .catalogue-filter-group-header-option {display:inline-block; vertical-align:top; margin:0 0 0 10px; padding:13px 0 8px 0}
+    .catalogue-filter-group-header-option:first-child {margin:0}
+    .catalogue-filter-group-header-option-inner {height:33px; padding:0 10px; font-weight:normal; font-size:18px; line-height:33px; color:#fff; background:#f68d1e; border-radius:2px; letter-spacing:0}
+    .catalogue-filter-group-header-option-inner img {display:none}
+    .catalogue-filter-group-header-option-inner em {font-style:normal; margin:0 5px 0 0}
     .catalogue-filter-group-container {padding:0}
     .catalogue-filter-item {margin:0; border-top:1px solid #e3e3e3; font-size:18px; line-height:28px; font-weight:normal}
     .catalogue-filter-item:first-child {border-top:none}
@@ -1446,6 +1455,7 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .catalogue-filter-item label:hover::after {display:none}
     .catalogue-filter-item span {padding:0 100px 0 0; white-space:normal}
     .catalogue-filter-item span::before {left:auto; width:28px; height:28px; right:20px; top:0; background-size:19px 13px}
+    .catalogue-filter-item-radio input:checked+span::after {left:auto; right:28px; top:8px; width:12px; height:12px; background:#000; border-radius:50%}
     .catalogue-filter-item-country span {padding:0 100px 0 57px}
     .catalogue-filter-item-country span em {left:0; width:42px}
     .catalogue-filter-item-country span em img {transform:scale(1.6)}
@@ -1459,6 +1469,22 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .catalogue-filter-item-sub .catalogue-filter-item span {display:block; padding:0 100px 0 0}
     .catalogue-filter-item-sub .catalogue-filter-item span::before {display:block}
     .catalogue-filter-item-sub-inner {display:block; max-width:none}
+
+    .catalogue-filter-mobile-ctrl {display:block; margin:0 0 0 20px}
+    .catalogue-filter-mobile-ctrl::after {content:""; display:block; clear:both}
+    .catalogue-filter-mobile-ctrl .btn {float:left; width:149px; padding:0; margin:0 0 0 20px; font-size:17px; height:53px; line-height:53px}
+    .catalogue-filter-mobile-ctrl .btn:first-child {margin:0}
+    .catalogue-filter-mobile-ctrl .btn.active {background:#fef8dc; color:#000; border-color:#fef8dc}
+    .catalogue-filter-mobile-ctrl .btn::before {display:none}
+    .catalogue-filter-mobile-ctrl .btn svg {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0}
+    .catalogue-filter-mobile-ctrl .btn path {fill:#231f20; transition:all 0.2s}
+    .catalogue-filter-mobile-ctrl .btn.active path {fill:#1d1d1b}
+    .catalogue-filter-title {display:none; margin:19px 0 0 0}
+    .catalogue-filter-title.visible {display:block}
+    .catalogue-search {display:none}
+    .catalogue-search.visible {display:block}
+    .catalogue-filter-container {display:none}
+    .catalogue-filter-container.visible {display:block}
 }
 
 .catalogue-filter-item-parent {position:relative; padding:0 26px 0 0}
