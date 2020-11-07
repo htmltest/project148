@@ -913,6 +913,9 @@ $(window).on('load resize scroll', function() {
             }
         }
     }
+    
+    $('.wrapper-inner').css({'padding-bottom': $('footer').outerHeight() + 81});
+    $('footer').css({'margin-top': -$('footer').outerHeight()});
 
 });
 

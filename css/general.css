@@ -410,7 +410,7 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
 .wrapper-inner {padding:82px 0 508px 0}
 
 @media screen and (max-width:1169px) {
-    .wrapper-inner {padding:87px 0 70px 0}
+    .wrapper-inner {padding:87px 0 70px 0; padding-bottom:70px !important}
 }
 
 header {position:fixed; left:0; top:0; right:0; z-index:99; background:#fff; height:82px; border-bottom:1px solid #eaeaea; transition:background 0.5s, height 0.5s, box-shadow 0.5s, transform 0.5s}
@@ -605,7 +605,8 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; background:#fff; hei
 @media screen and (max-width:1169px) {
     .contacts-list {margin:0}
     .contacts-item {display:block; width:auto; padding:0; margin:20px 0 0 0}
-    .contacts-item-name {padding:0 72px 0 0}
+    .contacts-item-phone {margin:0; font-size:20px; line-height:30px}
+    .contacts-item-email {font-size:20px; line-height:30px}
     .contacts-item-mobile-link {display:block; position:absolute; width:52px; height:52px; background:url(../images/contacts-item-open.svg) no-repeat; right:10px; top:10px}
     .contacts-item.open .contacts-item-mobile-link {background:url(../images/contacts-item-close.svg) no-repeat center}
     .contacts-item-mobile {display:none; position:absolute; left:0; top:0; right:0; bottom:0; background:#fff; text-align:center; font-size:0; line-height:0; letter-spacing:-1px}
@@ -689,11 +690,11 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; background:#fff; hei
     .file-link-info {font-size:16px; line-height:24px; margin:2px 0 0 0}
 }
 
-footer {height:427px; position:relative; margin:-427px 0 0 0; border-top:1px solid #f0f0f0; overflow:hidden}
+footer {position:relative; border-top:1px solid #f0f0f0; overflow:hidden}
 footer .container {position:relative}
 
 @media screen and (max-width:1169px) {
-    footer {height:auto; margin:0; border-top-color:rgba(162, 162, 162, 0.3)}
+    footer {margin:0 !important; border-top-color:rgba(162, 162, 162, 0.3)}
 }
 
 .footer-right {float:right; display:table; border-collapse:collapse; margin:49px 0 0 0}
@@ -954,8 +955,9 @@ footer .container {position:relative}
     .window-auth .auth-social {text-align:center}
 }
 
-.window-auth-ctrl {margin:40px -30px 0 -40px; background:#d9eef7; text-align:center; padding:25px 0; direction:rtl}
+.window-auth-ctrl {margin:40px -30px 0 -40px; background:#fef7d9; text-align:center; padding:25px 0; direction:rtl}
 .window-auth-ctrl .form-submit {display:inline-block; vertical-align:middle; margin:0; direction:ltr; z-index:1}
+.window-auth-ctrl .auth-forgot {display:inline-block; vertical-align:middle; margin:0; padding:0; border:none; direction:ltr; margin:0 25px 0 0}
 .window-auth-ctrl .btn-mini::before {display:none}
 
 @media screen and (max-width:1169px) {
@@ -978,12 +980,13 @@ footer .container {position:relative}
     .window-auth .forgot-help {margin:14px -20px 0 -20px; padding-left:20px; padding-right:20px}
 }
 
-.window-auth .registration-side-title {margin:40px auto 0 auto; text-align:center; max-width:377px}
+.window-auth .registration-side-title {margin:21px auto 0 auto; text-align:center; max-width:377px}
+.window-auth .registration-side-contacts {margin:24px auto 0 auto; text-align:left}
 .window-auth .contacts-item-inner {z-index:1}
 .window-auth .contacts-item-inner::before {z-index:0}
 .window-auth h3 {text-align:left; font-weight:normal}
 .window-auth form > h3:first-child {margin-top:11px}
-.window-auth .registration-zones {padding-bottom:0}
+.window-auth .registration-zones {margin-bottom:30px; padding-bottom:35px}
 
 @media screen and (max-width:1169px) {
     .window-auth .registration-side-title {text-align:left; margin:40px 0 0 0}
@@ -1117,4 +1120,12 @@ footer .container {position:relative}
 
 @media screen and (max-width:1169px) {
     .event-cards-tabs-content-inner .catalogue-list {margin:40px 0 50px 0}
+}
+
+.window-participant form {text-align:left}
+.window-participant .registration-side-title {margin:12px 0 0 0; text-align:left; max-width:none}
+.window-participant .registration-side-contacts {margin:24px 0 0 0; text-align:left}
+
+@media screen and (max-width:1169px) {
+    .window-participant .registration-side-title {margin:-10px 0 0 0}
 }

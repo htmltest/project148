@@ -540,8 +540,9 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .back-mobile {display:none}
 
 @media screen and (max-width:1169px) {
-    .back-mobile {display:block; margin:27px 0 0 0; font-size:16px; line-height:24px; padding:0 0 0 40px; position:relative; color:#393939}
-    .back-mobile a {display:block; width:30px; height:35px; border-radius:6px; background:rgba(203, 203, 203, 0.22) url(../images/back-mobile.svg) no-repeat center; position:absolute; left:0; top:-8px}
+    .back-mobile {display:block; margin:27px 0 0 0; font-size:16px; line-height:24px; position:relative; color:#393939}
+    .back-mobile a {display:inline-block; text-decoration:none; position:relative; padding:0 0 0 40px; color:#393939}
+    .back-mobile a::before {content:""; display:block; width:30px; height:35px; border-radius:6px; background:rgba(203, 203, 203, 0.22) url(../images/back-mobile.svg) no-repeat center; position:absolute; left:0; top:-8px}
     .breadcrumbs+h1 {margin-top:24px}
     .back-mobile+h1 {margin-top:24px}
     .news-back-top+h1 {margin-top:24px}
@@ -1300,40 +1301,6 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .window-menu ul {border-bottom-color:#dadada}
     .window-menu ul li {margin:0 0 0 50px; font-size:24px; line-height:36px}
     .window-menu ul li:first-child {margin:0}
-}
-
-.window-auth form {margin:0; padding:18px 30px 0 40px; text-align:center}
-
-@media screen and (max-width:1169px) {
-    .window-auth form {margin:30px 19px 0 19px; padding:0; text-align:left}
-    .window-auth .auth-social-title {margin:38px 0 0 0}
-    .window-auth .auth-social {text-align:center}
-}
-
-.window-auth-ctrl {margin:40px -30px 0 -40px; background:#fef7d9; text-align:center; padding:25px 0; direction:rtl}
-.window-auth-ctrl .form-submit {display:inline-block; vertical-align:middle; margin:0; direction:ltr; z-index:1}
-.window-auth-ctrl .auth-forgot {display:inline-block; vertical-align:middle; margin:0; padding:0; border:none; direction:ltr; margin:0 25px 0 0}
-.window-auth-ctrl .btn-mini::before {border-color:#fce480; opacity:0.35; z-index:0}
-
-@media screen and (max-width:1169px) {
-    .window-auth-ctrl {margin:46px -19px 0 -19px; padding:30px 0 40px 0; direction:ltr}
-    .window-auth-ctrl .form-submit {display:block; width:308px; margin:0 auto}
-    .window-auth-ctrl .form-submit .btn {padding:0; width:100%}
-    .window-auth-ctrl .auth-forgot {display:block; margin:28px 0 0 0; font-weight:normal}
-}
-
-.window-auth .registration-side-title {text-align:center; margin:21px auto 0 auto}
-.window-auth .registration-side-contacts {margin:24px auto 0 auto; text-align:left}
-.window-auth .contacts-item-inner {z-index:1}
-.window-auth .contacts-item-inner::before {z-index:0}
-.window-auth h3 {text-align:left; font-weight:500}
-.window-auth .registration-zones {margin-bottom:30px; padding-bottom:35px}
-
-@media screen and (max-width:1169px) {
-    .window-auth .registration-side-title {text-align:left; margin:40px 0 0 0}
-    .window-auth .registration-side-feedback {position:relative; z-index:1}
-    .window-auth .registration-side-feedback .btn::before {display:block}
-    .window-auth .registration-side-feedback .btn::after {display:inline-block}
 }
 
 .window-reg-title {position:relative; margin:37px 0 32px 0; font-weight:normal; font-size:14px; line-height:21px; color:#838383; text-align:center}
