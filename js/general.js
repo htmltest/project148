@@ -823,6 +823,10 @@ function initForm(curForm) {
                                         }
                                     } else {
                                         result = false;
+                                        curField.addClass('error').removeClass('valid');
+                                        curField.parent().find('label.error').remove();
+                                        curField.parent().append('<label class="error">Данное значение уже зарегистрировано</label>');
+                                        $('html, body').animate({'scrollTop': curField.offset().top - $('header').height()});
                                     }
                                 });
                             }
@@ -851,6 +855,10 @@ function initForm(curForm) {
                                         }
                                     } else {
                                         result = false;
+                                        curField.addClass('error').removeClass('valid');
+                                        curField.parent().find('label.error').remove();
+                                        curField.parent().append('<label class="error">Данное значение уже зарегистрировано</label>');
+                                        $('html, body').animate({'scrollTop': curField.offset().top - $('header').height()});
                                     }
                                 });
                             }

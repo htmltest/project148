@@ -716,7 +716,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .visitors-slider {display:none}
 }
 
-.visitors-place {margin:35px 0 0 -34px}
+.visitors-place {margin:35px 0 0 0}
 .visitors-place .main-welcome-place-date {float:none; width:413px}
 .visitors-place .main-welcome-place-address {float:none; margin:20px 0 0 0}
 
