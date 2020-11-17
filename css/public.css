@@ -1561,14 +1561,14 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-item-red .catalogue-item-inner::after {border-color:#e63946}
 .catalogue-item-logo {padding:19px 0 0 0; height:68px}
 .catalogue-item-logo img {max-height:49px}
-.catalogue-item-info {margin:6px 0 0 0; height:44px}
-.catalogue-item-title {position:relative; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:normal; font-size:18px; line-height:27px; letter-spacing:0; color:#171717; margin:6px 0 0 0}
-.catalogue-item-brands {margin:-2px 0 0 0; position:relative; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; font-size:14px; line-height:21px; letter-spacing:0; color:#b7b7b7}
-.catalogue-item-country {margin:16px 0 0 0; font-size:0; line-height:0; color:#000; font-weight:300; letter-spacing:-1px; min-height:23px}
+.catalogue-item-info {margin:6px 0 0 0}
+.catalogue-item-title {position:relative; font-weight:normal; font-size:18px; line-height:27px; letter-spacing:0; color:#171717; margin:6px 0 0 0}
+.catalogue-item-brands {margin:-2px 0 0 0; position:relative; font-weight:600; font-size:14px; line-height:21px; letter-spacing:0; color:#b7b7b7}
+.catalogue-item-country {margin:16px 0 0 0; font-size:0; line-height:0; color:#000; font-weight:300; letter-spacing:-1px; min-height:23px; line-height:23px}
 .catalogue-item-country-item {display:inline-block; vertical-align:middle; margin:0 0 0 18px}
 .catalogue-item-country-item:first-child {margin:0}
 .catalogue-item-country-item img {display:inline-block; vertical-align:middle; height:16px; margin:-4px 0 0 0}
-.catalogue-item-country-item-hint {position:relative}
+.catalogue-item-country-item-hint {position:relative; min-height:23px}
 .catalogue-item-country-item-hint-title {display:none; position:absolute; z-index:2; left:100%; margin-left:11px; top:50%; white-space:nowrap; height:42px; margin-top:-21px; padding:0 10px; font-size:14px; line-height:40px; color:#353535; font-size:16px; font-weight:normal; letter-spacing:0; background:#fff; border:1px solid #e2e2e2; box-shadow:3px 9px 20px rgba(0, 0, 0, 0.11)}
 .catalogue-item-country-item-hint:hover .catalogue-item-country-item-hint-title {display:block}
 .catalogue-item-country-item-hint-title::before {content:""; display:block; width:14px; height:14px; border-top:1px solid #e2e2e2; border-right:1px solid #e2e2e2; background:#fff; transform:rotate(-135deg); position:absolute; left:-8px; top:50%; margin-top:-7px}
@@ -1646,6 +1646,11 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-item-order-new-active a {background:rgba(186, 186, 186, 0.2); color:#171717; border:none; line-height:33px}
 .catalogue-item-order-new-active a img {display:inline-block; vertical-align:middle; width:18px; height:18px; margin:-2px 5px 0 0}
 
+@media screen and (max-width:1169px) {
+    .catalogue-item-order-new-active a {line-height:51px}
+    .catalogue-item-order-new-active a img {width:25px; height:25px; margin:-4px 10px 0 0}
+}
+
 .catalogue-item-view {padding:0 0 0 16px; background:url(../images/icon-view.svg) no-repeat left center; font-size:12px; line-height:18px; letter-spacing:0; color:#222; font-weight:normal}
 .catalogue-item-places {padding:0 0 0 16px; text-align:left; background:url(../images/catalogue-item-places.svg) no-repeat left center; font-size:12px; line-height:18px; letter-spacing:0; color:#222; font-weight:normal; position:relative}
 .catalogue-item-view+.catalogue-item-places {margin:3px 0 0 0}
@@ -1660,6 +1665,8 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .catalogue-item-inner {padding:0 30px 20px 30px}
     .catalogue-container .catalogue-item-inner {padding:0 30px 160px 30px}
     .catalogue-with-btns .catalogue-item-inner {padding:0 30px 160px 30px}
+    .catalogue-container .catalogue-item.only-one-btn .catalogue-item-inner,
+    .catalogue-with-btns .catalogue-item.only-one-btn .catalogue-item-inner {padding:0 30px 100px 30px}
     .catalogue-item-logo {padding:29px 120px 0 0; height:88px; line-height:59px}
     .catalogue-item-logo img {max-height:59px; vertical-align:middle}
     .catalogue-item-info {margin:14px 0 0 0; height:auto}
@@ -2034,22 +2041,22 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .reviews-item-text > *:first-child {margin-top:0}
 .reviews-item-text > *:last-child {margin-bottom:0}
 
-.catalogue-info {margin:17px 0 30px 0; border:1px solid #e2e2e2; position:relative; background:#fff url(../images/catalogue-info.svg) no-repeat 20px 21px}
+.catalogue-info {margin:17px 0 30px 0; border:1px solid #e2e2e2; position:relative; background:#fff url(../images/catalogue-info.svg) no-repeat 20px 21px; padding:22px 0 25px 0}
 .catalogue-info-mobile {display:none}
 .catalogue-info::before {content:""; display:block; position:absolute; left:10px; top:10px; right:-11px; bottom:-11px; background:#fef7d9; z-index:-1}
 .catalogue-info::after {content:""; display:block; clear:both}
-.catalogue-info-text {float:left; max-width:calc(100% - 194px); padding:22px 0 25px 54px}
+.catalogue-info-text {float:left; max-width:calc(100% - 194px); padding:0 0 0 54px}
 .catalogue-info-text strong {font-weight:600}
-.catalogue-info-btn {float:left; padding:15px 0 15px 40px}
+.catalogue-info-btn {float:left; margin:-10px 0 -10px 40px}
 .catalogue-info-btn a {display:block; width:134px; height:41px; text-align:center; background:#e63946; color:#fff; text-transform:uppercase; font-weight:normal; font-size:12px; line-height:41px; letter-spacing:0.05em; text-decoration:none}
 .catalogue-info-btn a:hover {text-decoration:none; background:#fad7da; color:#171717}
 
 @media screen and (max-width:1169px) {
-    .catalogue-info {margin:0 20px 40px 20px; background-image:none; display:none}
+    .catalogue-info {margin:0 20px 40px 20px; background-image:none; display:none; padding:20px}
     .catalogue-info-mobile {display:block}
-    .catalogue-info-text {float:none; padding:20px 20px 0 20px; max-width:none; text-align:center}
+    .catalogue-info-text {float:none; padding:20px 0 0 0; max-width:none; text-align:center}
     .catalogue-info-text strong {display:block}
-    .catalogue-info-btn {float:none; padding:20px 20px 20px 0; text-align:center}
+    .catalogue-info-btn {float:none; margin:20px 0 0 0; text-align:center}
     .catalogue-info-btn a {display:inline-block; vertical-align:top; width:150px; height:51px; font-size:16px; line-height:51px}
 }
 
