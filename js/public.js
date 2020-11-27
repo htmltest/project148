@@ -769,6 +769,18 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+	$('body').on('click', '.main-stream-video-link', function(e) {
+		$('.main-stream-video-player').html('');
+		$(this).parent().addClass('start');
+		$(this).parent().find('.main-stream-video-player').html('<iframe width="560" height="315" src="' + $(this).attr('href') + '?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+		e.preventDefault();
+	});
+
+    $('body').on('click', '.main-schedule-list-more a', function(e) {
+        $('.main-schedule-list, .main-schedule-info').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {
