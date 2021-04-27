@@ -781,6 +781,13 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+	$('body').on('click', '.main-info-video-link', function(e) {
+		$('.main-info-video-player').html('');
+		$(this).parent().addClass('start');
+		$(this).parent().find('.main-info-video-player').html('<iframe width="560" height="315" src="' + $(this).attr('href') + '?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+		e.preventDefault();
+	});
+
 });
 
 $(window).on('load resize', function() {
