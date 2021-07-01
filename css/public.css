@@ -2493,3 +2493,22 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .main-schedule-list-more a {height:53px; padding:0 30px; font-size:17px; color:#000; line-height:53px; background:#fef7d9}
     .main-schedule-list-more a::after {width:18px; height:10px; background:url(../images/main-schedule-list-more-mobile.svg) no-repeat}
 }
+
+.main-subscribe {margin:80px 0 0 0; border:1px solid #e2e2e2; box-shadow:10px 10px 0 0 #fef7d9; padding:58px 183px 58px 193px}
+.main-subscribe h2 {margin:0; max-width:400px}
+.main-subscribe form {margin:30px 0 0 0; padding:0; width:740px; position:relative}
+.main-subscribe .form-input {width:566px; margin:0}
+.main-subscribe .form-policy {margin:18px 0 0 0; width:566px}
+.main-subscribe .form-submit {position:absolute; right:0; top:0; width:174px; margin:0}
+.main-subscribe .form-submit .btn {width:100%; padding:0; height:60px; line-height:60px}
+.main-subscribe .form-submit .btn::after {display:none}
+
+@media screen and (max-width:1169px) {
+    .main-subscribe {margin:90px 0 0 0; box-shadow:10px 10px 4px 0 #fef7d9; padding:50px 30px 43px 30px}
+    .main-subscribe h2 {margin:0 -10px 0 0; max-width:none}
+    .main-subscribe form {width:auto}
+    .main-subscribe .form-input {width:auto}
+    .main-subscribe .form-policy {margin:30px 0 0 0; width:auto}
+    .main-subscribe .form-submit {position:relative; right:auto; top:auto; width:auto; margin:40px 0 0 0}
+    .main-subscribe .form-submit .btn {height:67px; line-height:67px}
+}
