@@ -1095,3 +1095,22 @@ function updateMobileFilter() {
         });
     });
 }
+
+$(document).ready(function() {
+
+    $('.main-welcome-calendar-link').click(function(e) {
+        $(this).parent().addClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.main-welcome-calendar-inner').length == 0) {
+            $('.main-welcome-calendar-inner').removeClass('open');
+        }
+    });
+
+    $('.main-welcome-calendar-window-item').click(function(e) {
+        $('.main-welcome-calendar-inner').removeClass('open');
+    });
+
+});

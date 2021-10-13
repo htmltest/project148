@@ -2514,3 +2514,25 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .main-subscribe .form-submit {position:relative; right:auto; top:auto; width:auto; margin:40px 0 0 0}
     .main-subscribe .form-submit .btn {height:67px; line-height:67px}
 }
+
+.main-welcome-calendar {margin:20px 0 40px 0}
+.main-welcome-calendar::after {content:""; display:block; clear:both}
+.main-welcome-calendar-inner {position:relative; float:left}
+.main-welcome-calendar-link {display:block; padding:0 14px 0 17px; height:40px; font-size:14px; line-height:40px; font-weight:normal; color:#000; text-decoration:none; background:#fef7d9}
+.main-welcome-calendar-link:hover {color:#000; background:#ffdd50}
+.main-welcome-calendar-link::before {content:""; display:inline-block; vertical-align:middle; width:17px; height:19px; background:url(../images/main-welcome-calendar-link.svg) no-repeat; margin:-2px 10px 0 0}
+.main-welcome-calendar-window {display:none; position:absolute; left:0; top:50%; transform:translateY(-50%); width:202px; background:#fff; z-index:50; border:1px solid #e2e2e2; box-shadow:20px 20px 40px rgba(191, 191, 191, 0.13); border-radius:6px}
+.main-welcome-calendar-inner.open .main-welcome-calendar-window {display:block}
+.main-welcome-calendar-window-item {display:block; font-weight:normal; font-size:14px; line-height:37px; height:37px; color:#000; text-decoration:none; padding:0 0 0 40px; position:relative}
+.main-welcome-calendar-window-item:hover {color:#000; text-decoration:none; background:#f3f3f3}
+.main-welcome-calendar-window-item img {display:block; position:absolute; left:22px; top:50%; transform:translate(-50%, -50%)}
+.main-welcome-calendar-start {float:left; margin:0 0 0 20px; font-weight:normal; font-size:14px; line-height:40px; color:#272727}
+
+@media screen and (max-width:1169px) {
+    .main-welcome-calendar {margin:40px 0 70px 0}
+    .main-welcome-calendar-inner {float:none}
+    .main-welcome-calendar-link {display:inline-block; vertical-align:top; height:50px; padding:0 15px 0 20px; font-size:18px; line-height:50px}
+    .main-welcome-calendar-link::before {width:23px; height:26px; background-size:100%; margin:-2px 17px 0 0}
+    .main-welcome-calendar-window-item {font-size:18px; line-height:50px; height:50px}
+    .main-welcome-calendar-start {float:none; margin:15px 0 0 0; font-size:18px; line-height:27px}
+}
