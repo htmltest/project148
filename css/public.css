@@ -2536,3 +2536,13 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .main-welcome-calendar-window-item {font-size:18px; line-height:50px; height:50px}
     .main-welcome-calendar-start {float:none; margin:15px 0 0 0; font-size:18px; line-height:27px}
 }
+
+.main-seminar {line-height:0; margin:100px 0 0 0}
+.main-seminar a {display:block}
+.main-seminar img {display:block; width:100%}
+.main-seminar img:nth-child(2) {display:none}
+
+@media screen and (max-width:767px) {
+    .main-seminar img:nth-child(1) {display:none}
+    .main-seminar img:nth-child(2) {display:block}
+}
