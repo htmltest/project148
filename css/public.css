@@ -2546,3 +2546,65 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .main-seminar img:nth-child(1) {display:none}
     .main-seminar img:nth-child(2) {display:block}
 }
+
+.main-last {margin:132px 0 0 0; position:relative}
+.main-last-container {position:relative}
+.main-last-container::before {content:""; display:block; position:absolute; right:100%; margin-right:-190px; top:-177px; background:url(../images/main-last-left.svg) no-repeat; width:558px; height:571px; z-index:-1; pointer-events:none}
+.main-last-container::after {content:""; display:block; clear:both}
+.main-last-img {float:right; width:382px; margin:0 -19px 0 0; line-height:0}
+.main-last-img img {display:block; width:100%}
+.main-last-content {margin:0 402px 0 0; padding:5px 0 0 0}
+.main-last-title {text-transform:uppercase; font-weight:normal; font-size:30px; line-height:45px; letter-spacing:0.03em}
+.fonts-loaded .main-last-title {font-family:FiraSans, sans-serif}
+.main-last-title strong {font-weight:bold; color:#f68d1e}
+.main-last-text {margin:15px 0 0 0; letter-spacing:0.03em}
+.main-last-text span {color:#f68d1e}
+.main-last-next {margin:31px 0 0 0; padding:0 0 0 41px; position:relative; font-size:20px; line-height:30px}
+.main-last-next::before {content:""; display:block; position:absolute; left:0; top:2px; width:1px; bottom:2px; background:#c4c4c4}
+.main-last-next strong {font-weight:bold}
+.main-last-next a {color:#f68d1e; text-decoration:none; border-bottom:1px solid #f68d1e}
+.main-last-next a:hover {border-color:transparent}
+
+@media screen and (max-width:1169px) {
+    .main-last {margin:109px 0 0 0}
+    .main-last-container::before {display:none}
+    .main-last-img {float:none; margin:0 auto; width:440px}
+    .main-last-content {margin:70px 0 0 0; padding:0}
+    .main-last-title {font-size:24px; line-height:36px}
+    .main-last-next {margin:30px 0 0 0; padding:20px; border:1px solid #e2e2e2; position:relative; box-shadow:10px 10px 0 rgba(252, 228, 128, 0.3)}
+    .main-last-next::before {display:none}
+    .main-last-next br {display:none}
+}
+
+.main-online {margin:45px 0 0 0; position:relative}
+.main-online-container {position:relative}
+.main-online-container::before {content:""; display:block; position:absolute; left:100%; margin-left:-118px; bottom:-254px; background:url(../images/main-online-right.svg) no-repeat; width:396px; height:431px; z-index:-1; pointer-events:none}
+.main-online-container::after {content:""; display:block; clear:both}
+.main-online-left {float:left; width:50%; padding:0 10px 0 0}
+.main-online-right {float:left; width:50%; padding:0 0 0 10px}
+.main-online-title {font-weight:normal; font-size:28px; line-height:42px; color:#171717}
+.fonts-loaded .main-online-title {font-family:FiraSans, sans-serif}
+.main-online-title strong {font-weight:bold}
+.main-online-img {line-height:0; margin:24px 0 0 0}
+.main-online-img img {width:277px}
+.main-online-btn {margin:20px 0 0 0}
+.main-online-text {font-size:20px; line-height:30px; font-weight:500}
+.main-online-right a {color:#f68d1e; text-decoration:none; border-bottom:1px solid #f68d1e}
+.main-online-right a:hover {border-color:transparent}
+.main-online-reg {margin:20px 0 0 0}
+.main-online-video {margin:21px 0 0 0; font-weight:500}
+.main-online-video a {margin:0 0 0 32px; position:relative}
+.main-online-video a::before {content:""; display:block; position:absolute; left:-32px; top:50%; width:32px; height:24px; background:url(../images/main-online-video.svg) no-repeat; margin-top:-12px}
+
+@media screen and (max-width:1169px) {
+    .main-online {margin:50px 0 0 0}
+    .main-online-container::before {display:none}
+    .main-online-left {float:none; width:auto; padding:0}
+    .main-online-right {float:none; width:auto; padding:0; margin:40px 0 0 0}
+    .main-online-title {font-size:24px; line-height:36px}
+    .main-online-img {margin:30px 0 0 0}
+    .main-online-img img {width:383px}
+    .main-online-btn {margin:30px 0 0 0}
+    .main-online-video a {margin:0 0 0 45px}
+    .main-online-video a::before {left:-45px; background-size:30px 30px; margin-top:-15px; height:30px; width:45px}
+}
