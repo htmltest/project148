@@ -839,6 +839,12 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .archive-card-info-props-value a.archive-card-info-props-social {line-height:0; border-bottom:0; display:inline-block; vertical-align:top; margin:-2px 6px 0 0}
 .archive-card-info-props-value a.archive-card-info-props-social path {fill:#f68d1e; transition:all 0.2s}
 .archive-card-info-props-value a.archive-card-info-props-social:hover path {fill:#fce480}
+.archive-card-info-online {margin:35px 0 0 0; max-width:340px; display:block; color:#000000; text-decoration:none; background:#FCE480; box-shadow:7px 7px 0px #FEF6D3; padding:10px 20px; transition:background 0.2s, box-shadow 0.2s}
+.archive-card-info-online::after {content:""; display:block; clear:both}
+.archive-card-info-online:hover {color:#000000; background:#ffdd50; box-shadow:none}
+.archive-card-info-online:active {color:#000000; background:#ffeea7; box-shadow:none}
+.archive-card-info-online img {float:left; width:139px}
+.archive-card-info-online span {float:right; border-left:1px solid #DFCB77; padding:0 0 0 15px; font-size:12px; line-height:30px; font-weight:normal; text-transform:uppercase; letter-spacing:0.05em; margin:5px 0 0 0}
 
 @media screen and (max-width:1169px) {
     .archive-card-left {float:none; width:auto}
@@ -848,6 +854,8 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .archive-card-info-props-value {margin:3px 0 0 0}
     .archive-card-info-props-value a.archive-card-info-props-social {margin:10px 15px 0 0}
     .archive-card-info-props-value a.archive-card-info-props-social svg {width:50px; height:50px}
+    .archive-card-info-online {margin:30px 0 0 0; max-width:433px; padding:12px 22px}
+    .archive-card-info-online span {font-size:20px}
 }
 
 .archive-card-descr {margin:60px 0 0 0}
