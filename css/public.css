@@ -1220,8 +1220,10 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 
 .registration-side {display:table-cell; vertical-align:top; padding:0 0 0 60px}
 .registration-side-title {color:#313131; max-width:377px}
+.registration-side-title > *:first-child {margin-top:0}
+.registration-side-title > *:last-child {margin-bottom:0}
 .registration-side-contacts {margin:24px 0 0 0; max-width:377px}
-.registration-side-contacts .contacts-item {padding:0; width:100%}
+.registration-side-contacts .contacts-item {margin:20px 0 0 0; display:block; padding:0; width:100%}
 .registration-side-feedback {margin:40px 0 0 0}
 .registration-side h3 {margin:71px 0 0 0; font-weight:500}
 
@@ -2615,4 +2617,36 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .main-online-btn {margin:30px 0 0 0}
     .main-online-video a {margin:0 0 0 45px}
     .main-online-video a::before {left:-45px; background-size:30px 30px; margin-top:-15px; height:30px; width:45px}
+}
+
+.partcipant-promo-btn {margin:40px 0 0 0}
+.partcipant-promo-btn-2 {text-align:center; margin:80px 0 100px 0}
+.partcipant-promo-btn .btn {padding:0 65px 0 25px}
+.partcipant-promo-btn .btn::after {right:25px}
+.partcipant-promo-btn .btn:hover::after {right:10px}
+.partcipant-promo-btn img {display:inline-block; vertical-align:middle; margin:-2px 15px 0 0}
+
+@media screen and (max-width:1169px) {
+    .partcipant-promo-btn .btn {padding:15px 40px 15px 95px; position:relative; height:auto; font-size:20px; line-height:30px; text-align:left}
+    .partcipant-promo-btn .btn::after {display:none}
+    .partcipant-promo-btn img {position:absolute; left:25px; top:50%; width:50px; height:50px; margin:-25px 0 0 0}
+}
+
+.window-participant-promo {margin:20px 0; border-bottom:1px solid #DDDDDD; position:relative; z-index:1}
+.window-participant-promo .partcipant-promo-btn {margin:0}
+.window-participant-promo .partcipant-promo-btn .btn {padding:0; width:100%}
+.window-participant-promo .partcipant-promo-btn .btn::after {display:none}
+
+@media screen and (max-width:1169px) {
+    .window-participant-promo .partcipant-promo-btn .btn {padding:10px 15px 10px 95px; font-size:17px; line-height:26px}
+}
+
+.registration-side-telegram-mobile {display:none}
+.registration-side-telegram {margin:0 0 20px 0; width:377px; border:1px solid #E2E2E2; box-shadow:10px 10px 0px #FEF7D9; padding:20px 20px 20px 70px; position:relative}
+.registration-side-telegram strong {font-weight:500}
+.registration-side-telegram img {display:block; width:30px; height:30px; position:absolute; left:20px; top:20px}
+
+@media screen and (max-width:1169px) {
+    .registration-side-telegram {width:auto; display:none}
+    .registration-side-telegram-mobile {display:block; margin:40px 0 57px 0}
 }
