@@ -2366,7 +2366,7 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .main-stream {margin:131px 0 0 0}
 .main-stream-container {margin:40px 0 0 0}
 .main-stream-container::after {content:""; display:block; clear:both}
-.main-stream-video {float:left; clear:left; width:644px; height:362px; position:relative; margin}
+.main-stream-video {float:left; clear:left; width:644px; height:362px; position:relative}
 .main-stream-video-link {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover}
 .main-stream-video-link::before {content:""; position:absolute; display:block; left:0; top:0; right:0; bottom:0; background:linear-gradient(0deg, #fff2be 0%, #fce48033 100%)}
 .main-stream-video-link span {display:block; position:absolute; left:50%; top:50%; width:68px; height:68px; margin:-34px 0 0 -34px}
