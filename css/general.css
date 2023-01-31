@@ -823,19 +823,18 @@ footer .container {position:relative}
 }
 
 .footer-partners {float:left}
-.footer-partner {float:left; margin:0 0 0 14px; line-height:47px}
+.footer-partner {float:left; margin:0 0 0 16px; line-height:47px}
 .footer-partner:first-child {margin:0}
 .footer-partner img {vertical-align:middle; margin:-2px 0 0 0}
 .footer-partner:nth-child(1) img {width:78px}
-.footer-partner:nth-child(2) img {width:34px}
 
 @media screen and (max-width:1169px) {
     .footer-partners {float:none; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; background:#fff; padding:0 0 28px 0}
-    .footer-partner {float:none; display:inline-block; vertical-align:middle; margin:0 0 0 33px; line-height:0}
+    .footer-partner {float:none; display:inline-block; vertical-align:middle; margin:0 0 0 48px; line-height:0}
     .footer-partner:first-child {margin:0}
     .footer-partner img {margin:0}
     .footer-partner:nth-child(1) img {width:auto}
-    .footer-partner:nth-child(2) img {width:auto}
+    .footer-partner:nth-child(2) img {height:34px}
 }
 
 .up-link {display:block; opacity:0; visibility:hidden; position:fixed; z-index:90; right:4px; bottom:4px; transition:opacity 0.2s}
