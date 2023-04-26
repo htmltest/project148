@@ -2661,3 +2661,35 @@ a.main-partner-mobile {display:none}
     .registration-side-telegram {width:auto; display:none}
     .registration-side-telegram-mobile {display:block; margin:40px 0 57px 0}
 }
+
+.main-investforum {margin:100px 0; position:relative; background:#FFFFFF; border:1px solid #E2E2E2; box-shadow:10px 10px 4px #FEF7D9; padding:60px}
+.main-investforum::before {content:""; display:block; position:absolute; right:60px; bottom:0; width:660px; height:440px; background:url(../images/main-investforum.jpg) no-repeat; background-size:100% 100%}
+.main-investforum-top {position:relative; font-weight:normal; font-size:20px; line-height:30px; color:#171717}
+.fonts-loaded .main-investforum-top {font-family:FiraSans, sans-serif}
+.main-investforum-top strong {font-weight:bold}
+.main-investforum-header {margin:40px 0 0 0; position:relative}
+.main-investforum-header::after {content:""; display:block; clear:both}
+.main-investforum-logo {float:right; width:285px}
+.main-investforum-logo img {display:block; width:100%}
+.main-investforum-title {float:left; width:530px; font-weight:bold; font-size:48px; line-height:62px; color:#171717; text-transform:uppercase}
+.fonts-loaded .main-investforum-title {font-family:FiraSans, sans-serif}
+.main-investforum-text {position:relative; margin:20px 0 0 0; max-width:460px; color:#1F1F1F; font-size:18px; line-height:27px}
+.main-investforum-date {position:relative; margin:20px 0 0 0}
+.main-investforum-date::after {content:""; display:block; clear:both}
+.main-investforum-date .main-welcome-place-date {width:auto; padding-right:30px}
+.main-investforum-btn {margin:20px 0 0 0; position:relative; z-index:1}
+.main-investforum-btn .btn {padding-left:30px; padding-right:75px}
+
+@media screen and (max-width:1169px) {
+    .main-investforum {margin:60px 0 80px 0; padding:20px}
+    .main-investforum::before {width:400px; height:252px; right:20px; bottom:20px}
+    .main-investforum-logo {float:none}
+    .main-investforum-title {float:none; width:400px; font-size:36px; line-height:47px; margin:40px 0 0 0}
+    .main-investforum-text {margin:12px 0 0 0; max-width:400px}
+    .main-investforum-date {margin:40px 0 0 0}
+    .main-investforum-date .main-welcome-place-date {padding:20px 30px 20px 50px; margin:0 0 0 35px; height:auto}
+    .main-investforum-date .main-welcome-place-date::before {width:70px; height:70px; left:-35px; top:50%; margin-top:-35px; background-size:auto}
+    .main-investforum-date .main-welcome-place-text {margin:0; font-size:18px; line-height:27px}
+    .main-investforum-btn {margin:192px 0 0 0}
+    .main-investforum-btn .btn {width:auto; display:inline-block; font-size:14px; line-height:61px; height:61px; padding-right:30px}
+}

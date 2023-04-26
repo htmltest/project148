@@ -558,6 +558,22 @@ function initForm(curForm) {
         }
     });
 
+    curForm.find('.captcha-container').each(function() {
+        if ($('script#smartCaptchaScript').length == 0) {
+            $('body').append('<script src="https://captcha-api.yandex.ru/captcha.js?render=onload&onload=smartCaptchaLoad" defer id="smartCaptchaScript"></script>');
+        } else {
+            if (window.smartCaptcha) {
+                var curID = window.smartCaptcha.render(this, {
+                    sitekey: smartCaptchaKey,
+                    callback: smartCaptchaCallback,
+                    invisible: true,
+                    hideShield: true,
+                });
+                $(this).attr('data-smartid', curID);
+            }
+        }
+    });
+
     var curFormOptions = {
         ignore: '',
         invalidHandler: function(event, validator) {
@@ -685,186 +701,210 @@ function initForm(curForm) {
                 }
             });
             if (result) {
-                if (curForm.hasClass('ajax-form')) {
-                    curForm.addClass('loading');
-                    var formData = new FormData(form);
+                var smartCaptchaWaiting = false;
+                curForm.find('.captcha-container').each(function() {
+                    if (curForm.attr('form-smartcaptchawaiting') != 'true') {
+                        var curBlock = $(this);
+                        var curInput = curBlock.find('input[name="smart-token"]');
+                        curInput.removeAttr('value');
+                        smartCaptchaWaiting = true;
+                        $('form[form-smartcaptchawaiting]').removeAttr('form-smartcaptchawaiting');
+                        curForm.attr('form-smartcaptchawaiting', 'false');
 
-                    if (curForm.find('[type=file]').length != 0) {
-                        var file = curForm.find('[type=file]')[0].files[0];
-                        formData.append('file', file);
-                    }
-
-                    $.ajax({
-                        type: 'POST',
-                        url: curForm.attr('action'),
-                        processData: false,
-                        contentType: false,
-                        dataType: 'html',
-                        data: formData,
-                        cache: false
-                    }).done(function(html) {
-                        curForm.html(html);
-                        initForm(curForm);
-                        curForm.removeClass('loading');
-                    });
-                } else if (curForm.hasClass('ajax-form-faq')) {
-                    curForm.addClass('loading');
-                    var formData = new FormData(form);
-
-                    if (curForm.find('[type=file]').length != 0) {
-                        var file = curForm.find('[type=file]')[0].files[0];
-                        formData.append('file', file);
-                    }
-
-                    $.ajax({
-                        type: 'POST',
-                        url: curForm.attr('action'),
-                        processData: false,
-                        contentType: false,
-                        dataType: 'json',
-                        data: formData,
-                        cache: false
-                    }).done(function(data) {
-                        if (data.status) {
-                            curForm.find('textarea').val('').trigger('blur');
-                            curForm.parent().find('.faq-list-self').prepend('<div class="faq-item"><div class="faq-item-title"><a href="#">' + data.title + '<span>' + data.date + '</span></span></a></div></div>');
-                            curForm.find('.message').remove();
-                            curForm.prepend('<div class="message message-success"><div class="message-title">' + curForm.find('.form-success-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
-                        } else {
-                            curForm.find('.message').remove();
-                            curForm.prepend('<div class="message message-error"><div class="message-title">' + curForm.find('.form-error-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
+                        if (!window.smartCaptcha) {
+                            alert('Сервис временно недоступен');
+                            return;
                         }
-                        curForm.removeClass('loading');
-                    });
-                } else if (curForm.hasClass('ajax-form-comment')) {
-                    curForm.addClass('loading');
-                    var formData = new FormData(form);
-
-                    $.ajax({
-                        type: 'POST',
-                        url: curForm.attr('action'),
-                        processData: false,
-                        contentType: false,
-                        dataType: 'json',
-                        data: formData,
-                        cache: false
-                    }).done(function(data) {
-                        if (data.status) {
-                            curForm.find('textarea').val('').trigger('blur');
-                            curForm.parent().find('.comment-list').prepend('<div class="comment-item"><div class="comment-item-title"><div class="comment-item-date">' + data.date + '</div><div class="meet-card-company-info-props-delegate"><div class="manager-table-delegate-letter manager-table-delegate-letter-' + data.color + '">' + data.letter + '</div><div class="manager-table-delegate-name">' + data.author + '</div></div></div><div class="comment-item-text">' + data.text + '</div><a href="#" class="comment-item-link"></a></div>');
-                            curForm.find('.message').remove();
-                            curForm.prepend('<div class="message message-success"><div class="message-title">' + curForm.find('.form-success-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
-                        } else {
-                            curForm.find('.message').remove();
-                            curForm.prepend('<div class="message message-error"><div class="message-title">' + curForm.find('.form-error-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
-                        }
-                        curForm.removeClass('loading');
-                    });
-                } else if (curForm.hasClass('ajax-form-faq-add')) {
-                    curForm.addClass('loading');
-                    var formData = new FormData(form);
-
-                    $.ajax({
-                        type: 'POST',
-                        url: curForm.attr('action'),
-                        processData: false,
-                        contentType: false,
-                        dataType: 'json',
-                        data: formData,
-                        cache: false
-                    }).done(function(data) {
-                        if (data.status) {
-                            curForm.find('textarea').val('').trigger('blur');
-                            $('<div class="faq-card-list-item"><div class="faq-card-list-item-title">Ответ<span>' + data.date + '</span></div><div class="faq-card-list-item-text">' + data.text + '</div></div>').insertBefore(curForm.parent());
-                            curForm.find('.message').remove();
-                            var curTop = curForm.parent().parent().find('.faq-card-list-item:last').offset().top;
-                            curForm.parent().parent().find('.support-open-form').remove();
-                            curForm.parent().remove();
-                            $('html, body').animate({'scrollTop': curTop - $('header').height()});
-                        } else {
-                            curForm.find('.message').remove();
-                            curForm.prepend('<div class="message message-error"><div class="message-title">' + curForm.find('.form-error-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
-                        }
-                        curForm.removeClass('loading');
-                    });
-                } else if (curForm.hasClass('window-form')) {
-                    var formData = new FormData(form);
-
-                    if (curForm.find('[type=file]').length != 0) {
-                        var file = curForm.find('[type=file]')[0].files[0];
-                        formData.append('file', file);
-                    }
-
-                    windowOpen(curForm.attr('action'), formData);
-                } else {
-                    if (curForm.find('.inncheck, .emailcheck').length > 0) {
-                        var count = 0;
-                        var result = true;
-                        curForm.find('.inncheck').each(function(e) {
-                            var curField = $(this);
-                            var curValue = curField.val();
-                            if (curValue !== '') {
-                                $.ajax({
-                                    type: 'POST',
-                                    url: 'ajax/check-inn.html?' + curField.attr('name') + '=' + curValue,
-                                    processData: false,
-                                    contentType: false,
-                                    dataType: 'html',
-                                    data: null,
-                                    cache: false
-                                }).done(function(html) {
-                                    count++;
-                                    if (html == 'true') {
-                                        if (count == curForm.find('.inncheck, .emailcheck').length && result) {
-                                            curField.removeClass('error').addClass('valid');
-                                            curField.parent().find('label.error').remove();
-
-                                            form.submit();
-                                        }
-                                    } else {
-                                        result = false;
-                                        curField.addClass('error').removeClass('valid');
-                                        curField.parent().find('label.error').remove();
-                                        curField.parent().append('<label class="error">Данное значение уже зарегистрировано</label>');
-                                        $('html, body').animate({'scrollTop': curField.offset().top - $('header').height()});
-                                    }
-                                });
-                            }
-                        });
-
-                        curForm.find('.emailcheck').each(function(e) {
-                            var curField = $(this);
-                            var curValue = curField.val();
-                            if (curValue !== '') {
-                                $.ajax({
-                                    type: 'POST',
-                                    url: 'ajax/check-email.html?' + curField.attr('name') + '=' + curValue,
-                                    processData: false,
-                                    contentType: false,
-                                    dataType: 'html',
-                                    data: null,
-                                    cache: false
-                                }).done(function(html) {
-                                    count++;
-                                    if (html == 'true') {
-                                        if (count == curForm.find('.inncheck, .emailcheck').length && result) {
-                                            curField.removeClass('error').addClass('valid');
-                                            curField.parent().find('label.error').remove();
-
-                                            form.submit();
-                                        }
-                                    } else {
-                                        result = false;
-                                        curField.addClass('error').removeClass('valid');
-                                        curField.parent().find('label.error').remove();
-                                        curField.parent().append('<label class="error">Данное значение уже зарегистрировано</label>');
-                                        $('html, body').animate({'scrollTop': curField.offset().top - $('header').height()});
-                                    }
-                                });
-                            }
-                        });
+                        var curID = $(this).attr('data-smartid');
+                        window.smartCaptcha.execute(curID);
                     } else {
-                        form.submit();
+                        curForm.removeAttr('form-smartcaptchawaiting');
+                    }
+                });
+
+                if (!smartCaptchaWaiting) {
+
+                    if (curForm.hasClass('ajax-form')) {
+                        curForm.addClass('loading');
+                        var formData = new FormData(form);
+
+                        if (curForm.find('[type=file]').length != 0) {
+                            var file = curForm.find('[type=file]')[0].files[0];
+                            formData.append('file', file);
+                        }
+
+                        $.ajax({
+                            type: 'POST',
+                            url: curForm.attr('action'),
+                            processData: false,
+                            contentType: false,
+                            dataType: 'html',
+                            data: formData,
+                            cache: false
+                        }).done(function(html) {
+                            curForm.html(html);
+                            initForm(curForm);
+                            curForm.removeClass('loading');
+                        });
+                    } else if (curForm.hasClass('ajax-form-faq')) {
+                        curForm.addClass('loading');
+                        var formData = new FormData(form);
+
+                        if (curForm.find('[type=file]').length != 0) {
+                            var file = curForm.find('[type=file]')[0].files[0];
+                            formData.append('file', file);
+                        }
+
+                        $.ajax({
+                            type: 'POST',
+                            url: curForm.attr('action'),
+                            processData: false,
+                            contentType: false,
+                            dataType: 'json',
+                            data: formData,
+                            cache: false
+                        }).done(function(data) {
+                            if (data.status) {
+                                curForm.find('textarea').val('').trigger('blur');
+                                curForm.parent().find('.faq-list-self').prepend('<div class="faq-item"><div class="faq-item-title"><a href="#">' + data.title + '<span>' + data.date + '</span></span></a></div></div>');
+                                curForm.find('.message').remove();
+                                curForm.prepend('<div class="message message-success"><div class="message-title">' + curForm.find('.form-success-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
+                            } else {
+                                curForm.find('.message').remove();
+                                curForm.prepend('<div class="message message-error"><div class="message-title">' + curForm.find('.form-error-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
+                            }
+                            curForm.removeClass('loading');
+                        });
+                    } else if (curForm.hasClass('ajax-form-comment')) {
+                        curForm.addClass('loading');
+                        var formData = new FormData(form);
+
+                        $.ajax({
+                            type: 'POST',
+                            url: curForm.attr('action'),
+                            processData: false,
+                            contentType: false,
+                            dataType: 'json',
+                            data: formData,
+                            cache: false
+                        }).done(function(data) {
+                            if (data.status) {
+                                curForm.find('textarea').val('').trigger('blur');
+                                curForm.parent().find('.comment-list').prepend('<div class="comment-item"><div class="comment-item-title"><div class="comment-item-date">' + data.date + '</div><div class="meet-card-company-info-props-delegate"><div class="manager-table-delegate-letter manager-table-delegate-letter-' + data.color + '">' + data.letter + '</div><div class="manager-table-delegate-name">' + data.author + '</div></div></div><div class="comment-item-text">' + data.text + '</div><a href="#" class="comment-item-link"></a></div>');
+                                curForm.find('.message').remove();
+                                curForm.prepend('<div class="message message-success"><div class="message-title">' + curForm.find('.form-success-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
+                            } else {
+                                curForm.find('.message').remove();
+                                curForm.prepend('<div class="message message-error"><div class="message-title">' + curForm.find('.form-error-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
+                            }
+                            curForm.removeClass('loading');
+                        });
+                    } else if (curForm.hasClass('ajax-form-faq-add')) {
+                        curForm.addClass('loading');
+                        var formData = new FormData(form);
+
+                        $.ajax({
+                            type: 'POST',
+                            url: curForm.attr('action'),
+                            processData: false,
+                            contentType: false,
+                            dataType: 'json',
+                            data: formData,
+                            cache: false
+                        }).done(function(data) {
+                            if (data.status) {
+                                curForm.find('textarea').val('').trigger('blur');
+                                $('<div class="faq-card-list-item"><div class="faq-card-list-item-title">Ответ<span>' + data.date + '</span></div><div class="faq-card-list-item-text">' + data.text + '</div></div>').insertBefore(curForm.parent());
+                                curForm.find('.message').remove();
+                                var curTop = curForm.parent().parent().find('.faq-card-list-item:last').offset().top;
+                                curForm.parent().parent().find('.support-open-form').remove();
+                                curForm.parent().remove();
+                                $('html, body').animate({'scrollTop': curTop - $('header').height()});
+                            } else {
+                                curForm.find('.message').remove();
+                                curForm.prepend('<div class="message message-error"><div class="message-title">' + curForm.find('.form-error-text-title').html() + '</div><div class="message-text">' + data.message + '</div></div>')
+                            }
+                            curForm.removeClass('loading');
+                        });
+                    } else if (curForm.hasClass('window-form')) {
+                        var formData = new FormData(form);
+
+                        if (curForm.find('[type=file]').length != 0) {
+                            var file = curForm.find('[type=file]')[0].files[0];
+                            formData.append('file', file);
+                        }
+
+                        windowOpen(curForm.attr('action'), formData);
+                    } else {
+                        if (curForm.find('.inncheck, .emailcheck').length > 0) {
+                            var count = 0;
+                            var result = true;
+                            curForm.find('.inncheck').each(function(e) {
+                                var curField = $(this);
+                                var curValue = curField.val();
+                                if (curValue !== '') {
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: 'ajax/check-inn.html?' + curField.attr('name') + '=' + curValue,
+                                        processData: false,
+                                        contentType: false,
+                                        dataType: 'html',
+                                        data: null,
+                                        cache: false
+                                    }).done(function(html) {
+                                        count++;
+                                        if (html == 'true') {
+                                            if (count == curForm.find('.inncheck, .emailcheck').length && result) {
+                                                curField.removeClass('error').addClass('valid');
+                                                curField.parent().find('label.error').remove();
+
+                                                form.submit();
+                                            }
+                                        } else {
+                                            result = false;
+                                            curField.addClass('error').removeClass('valid');
+                                            curField.parent().find('label.error').remove();
+                                            curField.parent().append('<label class="error">Данное значение уже зарегистрировано</label>');
+                                            $('html, body').animate({'scrollTop': curField.offset().top - $('header').height()});
+                                        }
+                                    });
+                                }
+                            });
+
+                            curForm.find('.emailcheck').each(function(e) {
+                                var curField = $(this);
+                                var curValue = curField.val();
+                                if (curValue !== '') {
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: 'ajax/check-email.html?' + curField.attr('name') + '=' + curValue,
+                                        processData: false,
+                                        contentType: false,
+                                        dataType: 'html',
+                                        data: null,
+                                        cache: false
+                                    }).done(function(html) {
+                                        count++;
+                                        if (html == 'true') {
+                                            if (count == curForm.find('.inncheck, .emailcheck').length && result) {
+                                                curField.removeClass('error').addClass('valid');
+                                                curField.parent().find('label.error').remove();
+
+                                                form.submit();
+                                            }
+                                        } else {
+                                            result = false;
+                                            curField.addClass('error').removeClass('valid');
+                                            curField.parent().find('label.error').remove();
+                                            curField.parent().append('<label class="error">Данное значение уже зарегистрировано</label>');
+                                            $('html, body').animate({'scrollTop': curField.offset().top - $('header').height()});
+                                        }
+                                    });
+                                }
+                            });
+                        } else {
+                            form.submit();
+                        }
                     }
                 }
             }
@@ -888,6 +928,28 @@ function initForm(curForm) {
     }
 
     curForm.validate(curFormOptions);
+}
+
+var smartCaptchaKey = 'uahGSHTKJqjaJ0ezlhjrbOYH4OxS6zzL9CZ47OgY';
+
+function smartCaptchaLoad() {
+    $('.captcha-container').each(function() {
+        if (!window.smartCaptcha) {
+            return;
+        }
+        var curID = window.smartCaptcha.render(this, {
+            sitekey: smartCaptchaKey,
+            callback: smartCaptchaCallback,
+            invisible: true,
+            hideShield: true,
+        });
+        $(this).attr('data-smartid', curID);
+    });
+}
+
+function smartCaptchaCallback(token) {
+    $('form[form-smartcaptchawaiting]').attr('form-smartcaptchawaiting', 'true');
+    $('form[form-smartcaptchawaiting] [type="submit"]').trigger('click');
 }
 
 $(window).on('load resize scroll', function() {
@@ -921,7 +983,7 @@ $(window).on('load resize scroll', function() {
             }
         }
     }
-    
+
     $('.wrapper-inner').css({'padding-bottom': $('footer').outerHeight() + 81});
     $('footer').css({'margin-top': -$('footer').outerHeight()});
 
