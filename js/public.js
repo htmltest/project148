@@ -770,9 +770,13 @@ $(document).ready(function() {
     });
 
 	$('body').on('click', '.main-stream-video-link', function(e) {
-		$('.main-stream-video-player').html('');
+		$(this).parent().find('.main-stream-video-player').html('');
 		$(this).parent().addClass('start');
-		$(this).parent().find('.main-stream-video-player').html('<iframe id="' + $(this).attr('href') + '" onload="fc_load_iframe(this)" width="976" height="549" style="border:none" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+        if ($(this).hasClass('facecast')) {
+            $(this).parent().find('.main-stream-video-player').html('<iframe id="' + $(this).attr('href') + '" onload="fc_load_iframe(this)" width="976" height="549" style="border:none" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+        } else {
+            $(this).parent().find('.main-stream-video-player').html('<iframe width="560" height="315" src="' + $(this).attr('href') + '?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        }
 		e.preventDefault();
 	});
 
